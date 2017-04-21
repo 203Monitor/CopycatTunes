@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  HalfTunes
+//
+//  Created by 武国斌 on 2017/4/13.
+//  Copyright © 2017年 武国斌. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AppDelegate.h"
+#import "UIWindow+Ext.h"
+#import "Define.h"
+#import "Macro.h"
+
+#import "DBOperation.h"
+
+#pragma mark - Vendor
+#import "DOUAudioStreamer.h"
+#import "DOUAudioEventLoop.h"
+
+#import "CSJSONModel.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "YYKit.h"
+#import "ReactiveCocoa.h"
+#import "MJRefresh.h"
+
+#endif /* PrefixHeader_pch */

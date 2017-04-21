@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EEE3DBD1EA7740400FC0D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DBC1EA7740400FC0D4D /* main.m */; };
+		0EEE3DC61EA7740400FC0D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC41EA7740400FC0D4D /* Main.storyboard */; };
+		0EEE3DC81EA7740400FC0D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC71EA7740400FC0D4D /* Assets.xcassets */; };
+		0EEE3DCB1EA7740400FC0D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC91EA7740400FC0D4D /* LaunchScreen.storyboard */; };
+		0EEE3E281EA774AB00FC0D4D /* btn_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD31EA774AB00FC0D4D /* btn_pause@2x.png */; };
+		0EEE3E291EA774AB00FC0D4D /* btn_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD41EA774AB00FC0D4D /* btn_pause@3x.png */; };
+		0EEE3E2A1EA774AB00FC0D4D /* btn_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD51EA774AB00FC0D4D /* btn_play@2x.png */; };
+		0EEE3E2B1EA774AB00FC0D4D /* btn_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD61EA774AB00FC0D4D /* btn_play@3x.png */; };
+		0EEE3E2C1EA774AB00FC0D4D /* btn_play_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD71EA774AB00FC0D4D /* btn_play_next@2x.png */; };
+		0EEE3E2D1EA774AB00FC0D4D /* btn_play_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD81EA774AB00FC0D4D /* btn_play_next@3x.png */; };
+		0EEE3E2E1EA774AB00FC0D4D /* btn_play_prev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DD91EA774AB00FC0D4D /* btn_play_prev@2x.png */; };
+		0EEE3E2F1EA774AB00FC0D4D /* btn_play_prev@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DDA1EA774AB00FC0D4D /* btn_play_prev@3x.png */; };
+		0EEE3E301EA774AB00FC0D4D /* cm2_fm_btn_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DDB1EA774AB00FC0D4D /* cm2_fm_btn_next@2x.png */; };
+		0EEE3E311EA774AB00FC0D4D /* cm2_fm_btn_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DDC1EA774AB00FC0D4D /* cm2_fm_btn_next@3x.png */; };
+		0EEE3E321EA774AB00FC0D4D /* cm2_icn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DDD1EA774AB00FC0D4D /* cm2_icn_back@2x.png */; };
+		0EEE3E331EA774AB00FC0D4D /* cm2_icn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DDE1EA774AB00FC0D4D /* cm2_icn_back@3x.png */; };
+		0EEE3E341EA774AB00FC0D4D /* cm2_play_needle_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DDF1EA774AB00FC0D4D /* cm2_play_needle_play@2x.png */; };
+		0EEE3E351EA774AB00FC0D4D /* cm2_play_needle_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE01EA774AB00FC0D4D /* cm2_play_needle_play@3x.png */; };
+		0EEE3E361EA774AB00FC0D4D /* default_cover_play@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE11EA774AB00FC0D4D /* default_cover_play@2x.jpg */; };
+		0EEE3E371EA774AB00FC0D4D /* default_cover_play@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE21EA774AB00FC0D4D /* default_cover_play@3x.jpg */; };
+		0EEE3E381EA774AB00FC0D4D /* play_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE31EA774AB00FC0D4D /* play_next.png */; };
+		0EEE3E391EA774AB00FC0D4D /* play_next_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE41EA774AB00FC0D4D /* play_next_@2x.png */; };
+		0EEE3E3A1EA774AB00FC0D4D /* play_next_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE51EA774AB00FC0D4D /* play_next_@3x.png */; };
+		0EEE3E3B1EA774AB00FC0D4D /* play_prev.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE61EA774AB00FC0D4D /* play_prev.png */; };
+		0EEE3E3C1EA774AB00FC0D4D /* play_prev_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE71EA774AB00FC0D4D /* play_prev_@2x.png */; };
+		0EEE3E3D1EA774AB00FC0D4D /* play_prev_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DE81EA774AB00FC0D4D /* play_prev_@3x.png */; };
+		0EEE3E3E1EA774AB00FC0D4D /* ITunesSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DEC1EA774AB00FC0D4D /* ITunesSong.m */; };
+		0EEE3E3F1EA774AB00FC0D4D /* ITunesSongList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DEE1EA774AB00FC0D4D /* ITunesSongList.m */; };
+		0EEE3E401EA774AB00FC0D4D /* QQBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DF11EA774AB00FC0D4D /* QQBaseClass.m */; };
+		0EEE3E411EA774AB00FC0D4D /* QQData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DF31EA774AB00FC0D4D /* QQData.m */; };
+		0EEE3E421EA774AB00FC0D4D /* QQGrp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DF51EA774AB00FC0D4D /* QQGrp.m */; };
+		0EEE3E431EA774AB00FC0D4D /* QQList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DF71EA774AB00FC0D4D /* QQList.m */; };
+		0EEE3E441EA774AB00FC0D4D /* QQQc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DFA1EA774AB00FC0D4D /* QQQc.m */; };
+		0EEE3E451EA774AB00FC0D4D /* QQSemantic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DFC1EA774AB00FC0D4D /* QQSemantic.m */; };
+		0EEE3E461EA774AB00FC0D4D /* QQSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DFE1EA774AB00FC0D4D /* QQSong.m */; };
+		0EEE3E471EA774AB00FC0D4D /* QQZhida.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E001EA774AB00FC0D4D /* QQZhida.m */; };
+		0EEE3E481EA774AB00FC0D4D /* CSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E031EA774AB00FC0D4D /* CSJSONModel.m */; };
+		0EEE3E491EA774AB00FC0D4D /* DOUAudioUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E071EA774AB00FC0D4D /* DOUAudioUtil.m */; };
+		0EEE3E4A1EA774AB00FC0D4D /* Track+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E091EA774AB00FC0D4D /* Track+Download.m */; };
+		0EEE3E4B1EA774AB00FC0D4D /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E0B1EA774AB00FC0D4D /* Track.m */; };
+		0EEE3E4C1EA774AB00FC0D4D /* Macro.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E0D1EA774AB00FC0D4D /* Macro.m */; };
+		0EEE3E4D1EA774AB00FC0D4D /* UIWindow+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E101EA774AB00FC0D4D /* UIWindow+Ext.m */; };
+		0EEE3E4E1EA774AB00FC0D4D /* NSDictionary+ToData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E131EA774AB00FC0D4D /* NSDictionary+ToData.m */; };
+		0EEE3E4F1EA774AB00FC0D4D /* YuriNetwork6.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E151EA774AB00FC0D4D /* YuriNetwork6.m */; };
+		0EEE3E501EA774AB00FC0D4D /* YuriNetwork7.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E171EA774AB00FC0D4D /* YuriNetwork7.m */; };
+		0EEE3E511EA774AB00FC0D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E191EA774AB00FC0D4D /* AppDelegate.m */; };
+		0EEE3E521EA774AB00FC0D4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E1B1EA774AB00FC0D4D /* ViewController.m */; };
+		0EEE3E621EA7764B00FC0D4D /* DownloadSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E591EA7764B00FC0D4D /* DownloadSongViewController.m */; };
+		0EEE3E631EA7764B00FC0D4D /* PlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E5C1EA7764B00FC0D4D /* PlayingViewController.m */; };
+		0EEE3E641EA7764B00FC0D4D /* SearchSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E5F1EA7764B00FC0D4D /* SearchSongViewController.m */; };
+		0EEE3E651EA7764B00FC0D4D /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E611EA7764B00FC0D4D /* SongTableViewCell.m */; };
+		0EFAFA211EA8C568000CBDF9 /* DBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFAFA201EA8C568000CBDF9 /* DBOperation.m */; };
+		1DCCFD638AD5E2B1194432B4 /* libPods-CopycatTunes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A212ACD715FF4AD51F1B13 /* libPods-CopycatTunes.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EEE3DB81EA7740400FC0D4D /* CopycatTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopycatTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EEE3DBC1EA7740400FC0D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0EEE3DC51EA7740400FC0D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EEE3DC71EA7740400FC0D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EEE3DCA1EA7740400FC0D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EEE3DCC1EA7740400FC0D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EEE3DD31EA774AB00FC0D4D /* btn_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_pause@2x.png"; sourceTree = "<group>"; };
+		0EEE3DD41EA774AB00FC0D4D /* btn_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_pause@3x.png"; sourceTree = "<group>"; };
+		0EEE3DD51EA774AB00FC0D4D /* btn_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_play@2x.png"; sourceTree = "<group>"; };
+		0EEE3DD61EA774AB00FC0D4D /* btn_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_play@3x.png"; sourceTree = "<group>"; };
+		0EEE3DD71EA774AB00FC0D4D /* btn_play_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_play_next@2x.png"; sourceTree = "<group>"; };
+		0EEE3DD81EA774AB00FC0D4D /* btn_play_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_play_next@3x.png"; sourceTree = "<group>"; };
+		0EEE3DD91EA774AB00FC0D4D /* btn_play_prev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_play_prev@2x.png"; sourceTree = "<group>"; };
+		0EEE3DDA1EA774AB00FC0D4D /* btn_play_prev@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_play_prev@3x.png"; sourceTree = "<group>"; };
+		0EEE3DDB1EA774AB00FC0D4D /* cm2_fm_btn_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_fm_btn_next@2x.png"; sourceTree = "<group>"; };
+		0EEE3DDC1EA774AB00FC0D4D /* cm2_fm_btn_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_fm_btn_next@3x.png"; sourceTree = "<group>"; };
+		0EEE3DDD1EA774AB00FC0D4D /* cm2_icn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_icn_back@2x.png"; sourceTree = "<group>"; };
+		0EEE3DDE1EA774AB00FC0D4D /* cm2_icn_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_icn_back@3x.png"; sourceTree = "<group>"; };
+		0EEE3DDF1EA774AB00FC0D4D /* cm2_play_needle_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_play_needle_play@2x.png"; sourceTree = "<group>"; };
+		0EEE3DE01EA774AB00FC0D4D /* cm2_play_needle_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm2_play_needle_play@3x.png"; sourceTree = "<group>"; };
+		0EEE3DE11EA774AB00FC0D4D /* default_cover_play@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default_cover_play@2x.jpg"; sourceTree = "<group>"; };
+		0EEE3DE21EA774AB00FC0D4D /* default_cover_play@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default_cover_play@3x.jpg"; sourceTree = "<group>"; };
+		0EEE3DE31EA774AB00FC0D4D /* play_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_next.png; sourceTree = "<group>"; };
+		0EEE3DE41EA774AB00FC0D4D /* play_next_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_next_@2x.png"; sourceTree = "<group>"; };
+		0EEE3DE51EA774AB00FC0D4D /* play_next_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_next_@3x.png"; sourceTree = "<group>"; };
+		0EEE3DE61EA774AB00FC0D4D /* play_prev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_prev.png; sourceTree = "<group>"; };
+		0EEE3DE71EA774AB00FC0D4D /* play_prev_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_prev_@2x.png"; sourceTree = "<group>"; };
+		0EEE3DE81EA774AB00FC0D4D /* play_prev_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_prev_@3x.png"; sourceTree = "<group>"; };
+		0EEE3DEB1EA774AB00FC0D4D /* ITunesSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesSong.h; sourceTree = "<group>"; };
+		0EEE3DEC1EA774AB00FC0D4D /* ITunesSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesSong.m; sourceTree = "<group>"; };
+		0EEE3DED1EA774AB00FC0D4D /* ITunesSongList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesSongList.h; sourceTree = "<group>"; };
+		0EEE3DEE1EA774AB00FC0D4D /* ITunesSongList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesSongList.m; sourceTree = "<group>"; };
+		0EEE3DF01EA774AB00FC0D4D /* QQBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQBaseClass.h; sourceTree = "<group>"; };
+		0EEE3DF11EA774AB00FC0D4D /* QQBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQBaseClass.m; sourceTree = "<group>"; };
+		0EEE3DF21EA774AB00FC0D4D /* QQData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQData.h; sourceTree = "<group>"; };
+		0EEE3DF31EA774AB00FC0D4D /* QQData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQData.m; sourceTree = "<group>"; };
+		0EEE3DF41EA774AB00FC0D4D /* QQGrp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQGrp.h; sourceTree = "<group>"; };
+		0EEE3DF51EA774AB00FC0D4D /* QQGrp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQGrp.m; sourceTree = "<group>"; };
+		0EEE3DF61EA774AB00FC0D4D /* QQList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQList.h; sourceTree = "<group>"; };
+		0EEE3DF71EA774AB00FC0D4D /* QQList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQList.m; sourceTree = "<group>"; };
+		0EEE3DF81EA774AB00FC0D4D /* QQModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQModels.h; sourceTree = "<group>"; };
+		0EEE3DF91EA774AB00FC0D4D /* QQQc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQQc.h; sourceTree = "<group>"; };
+		0EEE3DFA1EA774AB00FC0D4D /* QQQc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQQc.m; sourceTree = "<group>"; };
+		0EEE3DFB1EA774AB00FC0D4D /* QQSemantic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSemantic.h; sourceTree = "<group>"; };
+		0EEE3DFC1EA774AB00FC0D4D /* QQSemantic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSemantic.m; sourceTree = "<group>"; };
+		0EEE3DFD1EA774AB00FC0D4D /* QQSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSong.h; sourceTree = "<group>"; };
+		0EEE3DFE1EA774AB00FC0D4D /* QQSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSong.m; sourceTree = "<group>"; };
+		0EEE3DFF1EA774AB00FC0D4D /* QQZhida.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQZhida.h; sourceTree = "<group>"; };
+		0EEE3E001EA774AB00FC0D4D /* QQZhida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZhida.m; sourceTree = "<group>"; };
+		0EEE3E021EA774AB00FC0D4D /* CSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSJSONModel.h; sourceTree = "<group>"; };
+		0EEE3E031EA774AB00FC0D4D /* CSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSJSONModel.m; sourceTree = "<group>"; };
+		0EEE3E041EA774AB00FC0D4D /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		0EEE3E061EA774AB00FC0D4D /* DOUAudioUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAudioUtil.h; sourceTree = "<group>"; };
+		0EEE3E071EA774AB00FC0D4D /* DOUAudioUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAudioUtil.m; sourceTree = "<group>"; };
+		0EEE3E081EA774AB00FC0D4D /* Track+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+Download.h"; sourceTree = "<group>"; };
+		0EEE3E091EA774AB00FC0D4D /* Track+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+Download.m"; sourceTree = "<group>"; };
+		0EEE3E0A1EA774AB00FC0D4D /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		0EEE3E0B1EA774AB00FC0D4D /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		0EEE3E0C1EA774AB00FC0D4D /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		0EEE3E0D1EA774AB00FC0D4D /* Macro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Macro.m; sourceTree = "<group>"; };
+		0EEE3E0F1EA774AB00FC0D4D /* UIWindow+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Ext.h"; sourceTree = "<group>"; };
+		0EEE3E101EA774AB00FC0D4D /* UIWindow+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Ext.m"; sourceTree = "<group>"; };
+		0EEE3E121EA774AB00FC0D4D /* NSDictionary+ToData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ToData.h"; sourceTree = "<group>"; };
+		0EEE3E131EA774AB00FC0D4D /* NSDictionary+ToData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ToData.m"; sourceTree = "<group>"; };
+		0EEE3E141EA774AB00FC0D4D /* YuriNetwork6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuriNetwork6.h; sourceTree = "<group>"; };
+		0EEE3E151EA774AB00FC0D4D /* YuriNetwork6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuriNetwork6.m; sourceTree = "<group>"; };
+		0EEE3E161EA774AB00FC0D4D /* YuriNetwork7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuriNetwork7.h; sourceTree = "<group>"; };
+		0EEE3E171EA774AB00FC0D4D /* YuriNetwork7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuriNetwork7.m; sourceTree = "<group>"; };
+		0EEE3E181EA774AB00FC0D4D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0EEE3E191EA774AB00FC0D4D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0EEE3E1A1EA774AB00FC0D4D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0EEE3E1B1EA774AB00FC0D4D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0EEE3E271EA774AB00FC0D4D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0EEE3E581EA7764B00FC0D4D /* DownloadSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadSongViewController.h; sourceTree = "<group>"; };
+		0EEE3E591EA7764B00FC0D4D /* DownloadSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadSongViewController.m; sourceTree = "<group>"; };
+		0EEE3E5B1EA7764B00FC0D4D /* PlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingViewController.h; sourceTree = "<group>"; };
+		0EEE3E5C1EA7764B00FC0D4D /* PlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingViewController.m; sourceTree = "<group>"; };
+		0EEE3E5E1EA7764B00FC0D4D /* SearchSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSongViewController.h; sourceTree = "<group>"; };
+		0EEE3E5F1EA7764B00FC0D4D /* SearchSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSongViewController.m; sourceTree = "<group>"; };
+		0EEE3E601EA7764B00FC0D4D /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewCell.h; sourceTree = "<group>"; };
+		0EEE3E611EA7764B00FC0D4D /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewCell.m; sourceTree = "<group>"; };
+		0EFAFA1F1EA8C568000CBDF9 /* DBOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOperation.h; sourceTree = "<group>"; };
+		0EFAFA201EA8C568000CBDF9 /* DBOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOperation.m; sourceTree = "<group>"; };
+		264C01220C6C61781FF58C24 /* Pods-CopycatTunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CopycatTunes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CopycatTunes/Pods-CopycatTunes.debug.xcconfig"; sourceTree = "<group>"; };
+		7C5DD6EFDC7703FEC516A9CE /* Pods-CopycatTunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CopycatTunes.release.xcconfig"; path = "Pods/Target Support Files/Pods-CopycatTunes/Pods-CopycatTunes.release.xcconfig"; sourceTree = "<group>"; };
+		C4A212ACD715FF4AD51F1B13 /* libPods-CopycatTunes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CopycatTunes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EEE3DB51EA7740400FC0D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCCFD638AD5E2B1194432B4 /* libPods-CopycatTunes.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EEE3DAF1EA7740400FC0D4D = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DBA1EA7740400FC0D4D /* CopycatTunes */,
+				0EEE3DB91EA7740400FC0D4D /* Products */,
+				60DCBB30FE2281E529E99855 /* Pods */,
+				5E6A52814535076536E1D4A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0EEE3DB91EA7740400FC0D4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DB81EA7740400FC0D4D /* CopycatTunes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EEE3DBA1EA7740400FC0D4D /* CopycatTunes */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DD21EA774AB00FC0D4D /* images */,
+				0EEE3DE91EA774AB00FC0D4D /* Model */,
+				0EEE3E011EA774AB00FC0D4D /* YuriFramework */,
+				0EEE3E181EA774AB00FC0D4D /* AppDelegate.h */,
+				0EEE3E191EA774AB00FC0D4D /* AppDelegate.m */,
+				0EEE3E1A1EA774AB00FC0D4D /* ViewController.h */,
+				0EEE3E1B1EA774AB00FC0D4D /* ViewController.m */,
+				0EEE3E571EA7764B00FC0D4D /* CopycatTunesDownload */,
+				0EEE3E5A1EA7764B00FC0D4D /* CopycatTunesPlaying */,
+				0EEE3E5D1EA7764B00FC0D4D /* CopycatTunesSearch */,
+				0EEE3E271EA774AB00FC0D4D /* PrefixHeader.pch */,
+				0EEE3DC41EA7740400FC0D4D /* Main.storyboard */,
+				0EEE3DC71EA7740400FC0D4D /* Assets.xcassets */,
+				0EEE3DC91EA7740400FC0D4D /* LaunchScreen.storyboard */,
+				0EEE3DCC1EA7740400FC0D4D /* Info.plist */,
+				0EEE3DBB1EA7740400FC0D4D /* Supporting Files */,
+			);
+			path = CopycatTunes;
+			sourceTree = "<group>";
+		};
+		0EEE3DBB1EA7740400FC0D4D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DBC1EA7740400FC0D4D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EEE3DD21EA774AB00FC0D4D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DD31EA774AB00FC0D4D /* btn_pause@2x.png */,
+				0EEE3DD41EA774AB00FC0D4D /* btn_pause@3x.png */,
+				0EEE3DD51EA774AB00FC0D4D /* btn_play@2x.png */,
+				0EEE3DD61EA774AB00FC0D4D /* btn_play@3x.png */,
+				0EEE3DD71EA774AB00FC0D4D /* btn_play_next@2x.png */,
+				0EEE3DD81EA774AB00FC0D4D /* btn_play_next@3x.png */,
+				0EEE3DD91EA774AB00FC0D4D /* btn_play_prev@2x.png */,
+				0EEE3DDA1EA774AB00FC0D4D /* btn_play_prev@3x.png */,
+				0EEE3DDB1EA774AB00FC0D4D /* cm2_fm_btn_next@2x.png */,
+				0EEE3DDC1EA774AB00FC0D4D /* cm2_fm_btn_next@3x.png */,
+				0EEE3DDD1EA774AB00FC0D4D /* cm2_icn_back@2x.png */,
+				0EEE3DDE1EA774AB00FC0D4D /* cm2_icn_back@3x.png */,
+				0EEE3DDF1EA774AB00FC0D4D /* cm2_play_needle_play@2x.png */,
+				0EEE3DE01EA774AB00FC0D4D /* cm2_play_needle_play@3x.png */,
+				0EEE3DE11EA774AB00FC0D4D /* default_cover_play@2x.jpg */,
+				0EEE3DE21EA774AB00FC0D4D /* default_cover_play@3x.jpg */,
+				0EEE3DE31EA774AB00FC0D4D /* play_next.png */,
+				0EEE3DE41EA774AB00FC0D4D /* play_next_@2x.png */,
+				0EEE3DE51EA774AB00FC0D4D /* play_next_@3x.png */,
+				0EEE3DE61EA774AB00FC0D4D /* play_prev.png */,
+				0EEE3DE71EA774AB00FC0D4D /* play_prev_@2x.png */,
+				0EEE3DE81EA774AB00FC0D4D /* play_prev_@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		0EEE3DE91EA774AB00FC0D4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DEA1EA774AB00FC0D4D /* ITunes */,
+				0EEE3DEF1EA774AB00FC0D4D /* QQ */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EEE3DEA1EA774AB00FC0D4D /* ITunes */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DEB1EA774AB00FC0D4D /* ITunesSong.h */,
+				0EEE3DEC1EA774AB00FC0D4D /* ITunesSong.m */,
+				0EEE3DED1EA774AB00FC0D4D /* ITunesSongList.h */,
+				0EEE3DEE1EA774AB00FC0D4D /* ITunesSongList.m */,
+			);
+			path = ITunes;
+			sourceTree = "<group>";
+		};
+		0EEE3DEF1EA774AB00FC0D4D /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3DF01EA774AB00FC0D4D /* QQBaseClass.h */,
+				0EEE3DF11EA774AB00FC0D4D /* QQBaseClass.m */,
+				0EEE3DF21EA774AB00FC0D4D /* QQData.h */,
+				0EEE3DF31EA774AB00FC0D4D /* QQData.m */,
+				0EEE3DF41EA774AB00FC0D4D /* QQGrp.h */,
+				0EEE3DF51EA774AB00FC0D4D /* QQGrp.m */,
+				0EEE3DF61EA774AB00FC0D4D /* QQList.h */,
+				0EEE3DF71EA774AB00FC0D4D /* QQList.m */,
+				0EEE3DF81EA774AB00FC0D4D /* QQModels.h */,
+				0EEE3DF91EA774AB00FC0D4D /* QQQc.h */,
+				0EEE3DFA1EA774AB00FC0D4D /* QQQc.m */,
+				0EEE3DFB1EA774AB00FC0D4D /* QQSemantic.h */,
+				0EEE3DFC1EA774AB00FC0D4D /* QQSemantic.m */,
+				0EEE3DFD1EA774AB00FC0D4D /* QQSong.h */,
+				0EEE3DFE1EA774AB00FC0D4D /* QQSong.m */,
+				0EEE3DFF1EA774AB00FC0D4D /* QQZhida.h */,
+				0EEE3E001EA774AB00FC0D4D /* QQZhida.m */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		0EEE3E011EA774AB00FC0D4D /* YuriFramework */ = {
+			isa = PBXGroup;
+			children = (
+				0EFAFA1E1EA8C568000CBDF9 /* FMDBUtil */,
+				0EEE3E051EA774AB00FC0D4D /* DouAudioStreamerUtil */,
+				0EEE3E0E1EA774AB00FC0D4D /* UIWindowExtension */,
+				0EEE3E111EA774AB00FC0D4D /* YuriNetwork */,
+				0EEE3E021EA774AB00FC0D4D /* CSJSONModel.h */,
+				0EEE3E031EA774AB00FC0D4D /* CSJSONModel.m */,
+				0EEE3E041EA774AB00FC0D4D /* Define.h */,
+				0EEE3E0C1EA774AB00FC0D4D /* Macro.h */,
+				0EEE3E0D1EA774AB00FC0D4D /* Macro.m */,
+			);
+			path = YuriFramework;
+			sourceTree = "<group>";
+		};
+		0EEE3E051EA774AB00FC0D4D /* DouAudioStreamerUtil */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3E061EA774AB00FC0D4D /* DOUAudioUtil.h */,
+				0EEE3E071EA774AB00FC0D4D /* DOUAudioUtil.m */,
+				0EEE3E081EA774AB00FC0D4D /* Track+Download.h */,
+				0EEE3E091EA774AB00FC0D4D /* Track+Download.m */,
+				0EEE3E0A1EA774AB00FC0D4D /* Track.h */,
+				0EEE3E0B1EA774AB00FC0D4D /* Track.m */,
+			);
+			path = DouAudioStreamerUtil;
+			sourceTree = "<group>";
+		};
+		0EEE3E0E1EA774AB00FC0D4D /* UIWindowExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3E0F1EA774AB00FC0D4D /* UIWindow+Ext.h */,
+				0EEE3E101EA774AB00FC0D4D /* UIWindow+Ext.m */,
+			);
+			path = UIWindowExtension;
+			sourceTree = "<group>";
+		};
+		0EEE3E111EA774AB00FC0D4D /* YuriNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3E121EA774AB00FC0D4D /* NSDictionary+ToData.h */,
+				0EEE3E131EA774AB00FC0D4D /* NSDictionary+ToData.m */,
+				0EEE3E141EA774AB00FC0D4D /* YuriNetwork6.h */,
+				0EEE3E151EA774AB00FC0D4D /* YuriNetwork6.m */,
+				0EEE3E161EA774AB00FC0D4D /* YuriNetwork7.h */,
+				0EEE3E171EA774AB00FC0D4D /* YuriNetwork7.m */,
+			);
+			path = YuriNetwork;
+			sourceTree = "<group>";
+		};
+		0EEE3E571EA7764B00FC0D4D /* CopycatTunesDownload */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3E581EA7764B00FC0D4D /* DownloadSongViewController.h */,
+				0EEE3E591EA7764B00FC0D4D /* DownloadSongViewController.m */,
+			);
+			path = CopycatTunesDownload;
+			sourceTree = "<group>";
+		};
+		0EEE3E5A1EA7764B00FC0D4D /* CopycatTunesPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3E5B1EA7764B00FC0D4D /* PlayingViewController.h */,
+				0EEE3E5C1EA7764B00FC0D4D /* PlayingViewController.m */,
+			);
+			path = CopycatTunesPlaying;
+			sourceTree = "<group>";
+		};
+		0EEE3E5D1EA7764B00FC0D4D /* CopycatTunesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE3E5E1EA7764B00FC0D4D /* SearchSongViewController.h */,
+				0EEE3E5F1EA7764B00FC0D4D /* SearchSongViewController.m */,
+				0EEE3E601EA7764B00FC0D4D /* SongTableViewCell.h */,
+				0EEE3E611EA7764B00FC0D4D /* SongTableViewCell.m */,
+			);
+			path = CopycatTunesSearch;
+			sourceTree = "<group>";
+		};
+		0EFAFA1E1EA8C568000CBDF9 /* FMDBUtil */ = {
+			isa = PBXGroup;
+			children = (
+				0EFAFA1F1EA8C568000CBDF9 /* DBOperation.h */,
+				0EFAFA201EA8C568000CBDF9 /* DBOperation.m */,
+			);
+			path = FMDBUtil;
+			sourceTree = "<group>";
+		};
+		5E6A52814535076536E1D4A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4A212ACD715FF4AD51F1B13 /* libPods-CopycatTunes.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60DCBB30FE2281E529E99855 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				264C01220C6C61781FF58C24 /* Pods-CopycatTunes.debug.xcconfig */,
+				7C5DD6EFDC7703FEC516A9CE /* Pods-CopycatTunes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EEE3DB71EA7740400FC0D4D /* CopycatTunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EEE3DCF1EA7740400FC0D4D /* Build configuration list for PBXNativeTarget "CopycatTunes" */;
+			buildPhases = (
+				8335260D4D8949063D8365B5 /* [CP] Check Pods Manifest.lock */,
+				0EEE3DB41EA7740400FC0D4D /* Sources */,
+				0EEE3DB51EA7740400FC0D4D /* Frameworks */,
+				0EEE3DB61EA7740400FC0D4D /* Resources */,
+				70B8D1A17DD16F7DB12CD6DD /* [CP] Embed Pods Frameworks */,
+				FA5B62DD96FDEB02652A19F7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CopycatTunes;
+			productName = CopycatTunes;
+			productReference = 0EEE3DB81EA7740400FC0D4D /* CopycatTunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EEE3DB01EA7740400FC0D4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "武国斌";
+				TargetAttributes = {
+					0EEE3DB71EA7740400FC0D4D = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SPNH83SVEV;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 0EEE3DB31EA7740400FC0D4D /* Build configuration list for PBXProject "CopycatTunes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0EEE3DAF1EA7740400FC0D4D;
+			productRefGroup = 0EEE3DB91EA7740400FC0D4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EEE3DB71EA7740400FC0D4D /* CopycatTunes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EEE3DB61EA7740400FC0D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EEE3E341EA774AB00FC0D4D /* cm2_play_needle_play@2x.png in Resources */,
+				0EEE3E301EA774AB00FC0D4D /* cm2_fm_btn_next@2x.png in Resources */,
+				0EEE3E2C1EA774AB00FC0D4D /* btn_play_next@2x.png in Resources */,
+				0EEE3E3B1EA774AB00FC0D4D /* play_prev.png in Resources */,
+				0EEE3E351EA774AB00FC0D4D /* cm2_play_needle_play@3x.png in Resources */,
+				0EEE3DCB1EA7740400FC0D4D /* LaunchScreen.storyboard in Resources */,
+				0EEE3E2A1EA774AB00FC0D4D /* btn_play@2x.png in Resources */,
+				0EEE3E3A1EA774AB00FC0D4D /* play_next_@3x.png in Resources */,
+				0EEE3E391EA774AB00FC0D4D /* play_next_@2x.png in Resources */,
+				0EEE3E311EA774AB00FC0D4D /* cm2_fm_btn_next@3x.png in Resources */,
+				0EEE3E331EA774AB00FC0D4D /* cm2_icn_back@3x.png in Resources */,
+				0EEE3E381EA774AB00FC0D4D /* play_next.png in Resources */,
+				0EEE3E3D1EA774AB00FC0D4D /* play_prev_@3x.png in Resources */,
+				0EEE3E361EA774AB00FC0D4D /* default_cover_play@2x.jpg in Resources */,
+				0EEE3DC81EA7740400FC0D4D /* Assets.xcassets in Resources */,
+				0EEE3E2B1EA774AB00FC0D4D /* btn_play@3x.png in Resources */,
+				0EEE3E3C1EA774AB00FC0D4D /* play_prev_@2x.png in Resources */,
+				0EEE3E281EA774AB00FC0D4D /* btn_pause@2x.png in Resources */,
+				0EEE3E2F1EA774AB00FC0D4D /* btn_play_prev@3x.png in Resources */,
+				0EEE3E2D1EA774AB00FC0D4D /* btn_play_next@3x.png in Resources */,
+				0EEE3DC61EA7740400FC0D4D /* Main.storyboard in Resources */,
+				0EEE3E2E1EA774AB00FC0D4D /* btn_play_prev@2x.png in Resources */,
+				0EEE3E291EA774AB00FC0D4D /* btn_pause@3x.png in Resources */,
+				0EEE3E371EA774AB00FC0D4D /* default_cover_play@3x.jpg in Resources */,
+				0EEE3E321EA774AB00FC0D4D /* cm2_icn_back@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70B8D1A17DD16F7DB12CD6DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CopycatTunes/Pods-CopycatTunes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8335260D4D8949063D8365B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA5B62DD96FDEB02652A19F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CopycatTunes/Pods-CopycatTunes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EEE3DB41EA7740400FC0D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EEE3E4D1EA774AB00FC0D4D /* UIWindow+Ext.m in Sources */,
+				0EEE3E4E1EA774AB00FC0D4D /* NSDictionary+ToData.m in Sources */,
+				0EEE3E461EA774AB00FC0D4D /* QQSong.m in Sources */,
+				0EEE3E501EA774AB00FC0D4D /* YuriNetwork7.m in Sources */,
+				0EEE3E4A1EA774AB00FC0D4D /* Track+Download.m in Sources */,
+				0EEE3E641EA7764B00FC0D4D /* SearchSongViewController.m in Sources */,
+				0EEE3E431EA774AB00FC0D4D /* QQList.m in Sources */,
+				0EEE3E621EA7764B00FC0D4D /* DownloadSongViewController.m in Sources */,
+				0EEE3E4B1EA774AB00FC0D4D /* Track.m in Sources */,
+				0EEE3E4C1EA774AB00FC0D4D /* Macro.m in Sources */,
+				0EEE3E3E1EA774AB00FC0D4D /* ITunesSong.m in Sources */,
+				0EEE3DBD1EA7740400FC0D4D /* main.m in Sources */,
+				0EEE3E3F1EA774AB00FC0D4D /* ITunesSongList.m in Sources */,
+				0EEE3E481EA774AB00FC0D4D /* CSJSONModel.m in Sources */,
+				0EEE3E631EA7764B00FC0D4D /* PlayingViewController.m in Sources */,
+				0EEE3E4F1EA774AB00FC0D4D /* YuriNetwork6.m in Sources */,
+				0EEE3E451EA774AB00FC0D4D /* QQSemantic.m in Sources */,
+				0EEE3E421EA774AB00FC0D4D /* QQGrp.m in Sources */,
+				0EEE3E471EA774AB00FC0D4D /* QQZhida.m in Sources */,
+				0EEE3E521EA774AB00FC0D4D /* ViewController.m in Sources */,
+				0EEE3E411EA774AB00FC0D4D /* QQData.m in Sources */,
+				0EEE3E491EA774AB00FC0D4D /* DOUAudioUtil.m in Sources */,
+				0EFAFA211EA8C568000CBDF9 /* DBOperation.m in Sources */,
+				0EEE3E401EA774AB00FC0D4D /* QQBaseClass.m in Sources */,
+				0EEE3E441EA774AB00FC0D4D /* QQQc.m in Sources */,
+				0EEE3E651EA7764B00FC0D4D /* SongTableViewCell.m in Sources */,
+				0EEE3E511EA774AB00FC0D4D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0EEE3DC41EA7740400FC0D4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EEE3DC51EA7740400FC0D4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0EEE3DC91EA7740400FC0D4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EEE3DCA1EA7740400FC0D4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EEE3DCD1EA7740400FC0D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0EEE3DCE1EA7740400FC0D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EEE3DD01EA7740400FC0D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 264C01220C6C61781FF58C24 /* Pods-CopycatTunes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SPNH83SVEV;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CopycatTunes/PrefixHeader.pch;
+				INFOPLIST_FILE = CopycatTunes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yucapri.CopycatTunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6de0383c-ef7a-4d68-9fd8-7645ab5be6d9";
+				PROVISIONING_PROFILE_SPECIFIER = "code space developer profile";
+			};
+			name = Debug;
+		};
+		0EEE3DD11EA7740400FC0D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C5DD6EFDC7703FEC516A9CE /* Pods-CopycatTunes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SPNH83SVEV;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CopycatTunes/PrefixHeader.pch;
+				INFOPLIST_FILE = CopycatTunes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yucapri.CopycatTunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6de0383c-ef7a-4d68-9fd8-7645ab5be6d9";
+				PROVISIONING_PROFILE_SPECIFIER = "code space developer profile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EEE3DB31EA7740400FC0D4D /* Build configuration list for PBXProject "CopycatTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EEE3DCD1EA7740400FC0D4D /* Debug */,
+				0EEE3DCE1EA7740400FC0D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EEE3DCF1EA7740400FC0D4D /* Build configuration list for PBXNativeTarget "CopycatTunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EEE3DD01EA7740400FC0D4D /* Debug */,
+				0EEE3DD11EA7740400FC0D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EEE3DB01EA7740400FC0D4D /* Project object */;
+}
