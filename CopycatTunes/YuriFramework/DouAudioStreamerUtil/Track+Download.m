@@ -49,7 +49,9 @@
         //- block的返回值, 要求返回一个URL, 返回的这个URL就是文件的位置的路径
         
         NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *path = [cachesPath stringByAppendingPathComponent:response.suggestedFilename];
+        NSArray *suffix = [response.suggestedFilename componentsSeparatedByString:@"."];
+        
+        NSString *path = [cachesPath stringByAppendingPathComponent:[[self.trackId stringByAppendingString:@"."] stringByAppendingString:[suffix lastObject]]];
         return [NSURL fileURLWithPath:path];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {

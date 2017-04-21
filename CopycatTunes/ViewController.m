@@ -10,6 +10,9 @@
 #import "SearchSongViewController.h"
 #import "DownloadSongViewController.h"
 
+#import "YuriNetwork7.h"
+#import "ITunesSongList.h"
+
 @implementation UIButton (Setting)
 
 - (void)setbuttonWithTitle:(NSString *)title {

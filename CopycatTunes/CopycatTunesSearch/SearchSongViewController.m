@@ -46,81 +46,40 @@ static NSString *const SearchCell = @"SearchCell";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weakSelf.page = [NSString stringWithFormat:@"%i",1];
         [weakSelf.datas removeAllObjects];
-        [weakSelf request2];
+        [weakSelf request];
     }];
     
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf request2];
+        [weakSelf request];
     }];
-    
-//    [self request1];
     
     _page = [NSString stringWithFormat:@"%i",1];
     [self.datas removeAllObjects];
-    [self request2];
+    [self request];
 }
 
-- (void)request1 {
+- (void)request {
     WS(weakSelf);
     IS_SHOWHUD(YES);
     YuriNetwork7 *request = [[YuriNetwork7 alloc] init];
     NSDictionary *params = @{@"media":@"music",@"entity":self.entity,@"term":self.term};
     [request requestWithURL:API andMethod:@"POST" andParams:params andSucceed:^(NSDictionary *dictionary) {
-        ITunesSongList *songList = [ITunesSongList objectFromJSON:dictionary];
-        
-        [weakSelf.datas addObjectsFromArray:[songList tracks]];
-        [weakSelf.tableView reloadData];
-        IS_SHOWHUD(NO);
+        ITunesSongList *model = [ITunesSongList objectFromJSON:dictionary];
+        [weakSelf suffexWithDatas:[model tracks]];
         
     } andFailure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
 }
 
-- (void)request2 {
-    NSString *api = @"http://s.music.qq.com/fcgi-bin/music_search_new_platform";
-    NSDictionary *params2 = @{@"t":@"0",
-                              @"n":@"20",//数量
-                              @"p":self.page,//分页
-                              @"aggr":@"1",
-                              @"cr":@"1",
-                              @"loginUin":@"0",
-                              @"format":@"json",
-                              @"inCharset":@"GB2312",
-                              @"outCharset":@"utf-8",
-                              @"notice":@"0",
-                              @"platform":@"jqminiframe.json",
-                              @"needNewCode":@"0",
-                              @"catZhida":@"0",
-                              @"remoteplace":@"sizer.newclient.next_song",
-                              @"w":self.term};
-    //创建请求管理者
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    //
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    //内容类型
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html",@"application/x-javascript",@"charset=utf-8", nil];
-    //post请求
-    IS_SHOWHUD(YES);
+- (void)suffexWithDatas:(NSArray *)datas {
+    [self.datas addObjectsFromArray:datas];
+    [self.tableView reloadData];
+    IS_SHOWHUD(NO);
+    self.page = [NSString stringWithFormat:@"%li",[self.page integerValue] + 1];
     
-    WS(weakSelf);
-    [manager GET:api parameters:params2 progress:^(NSProgress * _Nonnull uploadProgress) {
-        ;
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        QQBaseClass *model = [QQBaseClass objectFromData:responseObject];
-        
-        [weakSelf.datas addObjectsFromArray:[model tracks]];
-        [weakSelf.tableView reloadData];
-        IS_SHOWHUD(NO);
-        weakSelf.page = [NSString stringWithFormat:@"%li",[weakSelf.page integerValue] + 1];
-        
-        [weakSelf.tableView.mj_header endRefreshing];
-        [weakSelf.tableView.mj_footer endRefreshing];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-    }];
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 - (NSMutableArray *)datas {
