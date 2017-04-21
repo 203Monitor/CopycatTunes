@@ -11,7 +11,6 @@
 
 #pragma mark - self
 
-#define API @"https://itunes.apple.com/search"
 #define POSTREQUEST @"POST"
 #define GETREQUEST @"GET"
 #define FOLDER @"/files"

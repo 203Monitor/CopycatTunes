@@ -59,15 +59,61 @@ static NSString *const SearchCell = @"SearchCell";
 }
 
 - (void)request {
-    WS(weakSelf);
-    IS_SHOWHUD(YES);
-    YuriNetwork7 *request = [[YuriNetwork7 alloc] init];
+    
+    NSString *api = @"https://itunes.apple.com/search";
     NSDictionary *params = @{@"media":@"music",@"entity":self.entity,@"term":self.term};
-    [request requestWithURL:API andMethod:@"POST" andParams:params andSucceed:^(NSDictionary *dictionary) {
-        ITunesSongList *model = [ITunesSongList objectFromJSON:dictionary];
-        [weakSelf suffexWithDatas:[model tracks]];
+    
+    
+//    NSString *api = @"http://s.music.qq.com/fcgi-bin/music_search_new_platform";
+//    NSDictionary *params = @{@"t":@"0",
+//                              @"n":@"20",//数量
+//                              @"p":self.page,//分页
+//                              @"aggr":@"1",
+//                              @"cr":@"1",
+//                              @"loginUin":@"0",
+//                              @"format":@"json",
+//                              @"inCharset":@"GB2312",
+//                              @"outCharset":@"utf-8",
+//                              @"notice":@"0",
+//                              @"platform":@"jqminiframe.json",
+//                              @"needNewCode":@"0",
+//                              @"catZhida":@"0",
+//                              @"remoteplace":@"sizer.newclient.next_song",
+//                              @"w":self.term};
+    
+    
+//    WS(weakSelf);
+//    IS_SHOWHUD(YES);
+//    YuriNetwork7 *request = [[YuriNetwork7 alloc] init];
+//    [request requestWithURL:api andMethod:@"POST" andParams:params andSucceed:^(NSDictionary *dictionary) {
+//        ITunesSongList *model = [ITunesSongList objectFromJSON:dictionary];
+//        [weakSelf suffexWithDatas:[model tracks]];
+//
+//    } andFailure:^(NSError *error) {
+//        NSLog(@"%@",error);
+//    }];
+    
+    
+    //创建请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //内容类型
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/javascript",@"text/html",@"application/x-javascript",@"charset=utf-8", nil];
+    //post请求
+    IS_SHOWHUD(YES);
+    
+    WS(weakSelf);
+    [manager GET:api parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+        ;
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        QQBaseClass *model = [QQBaseClass objectFromData:responseObject];
+//        [weakSelf suffexWithDatas:[model tracks]];
         
-    } andFailure:^(NSError *error) {
+        ITunesSongList *model = [ITunesSongList objectFromData:responseObject];
+        [weakSelf suffexWithDatas:[model tracks]];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];
 }
