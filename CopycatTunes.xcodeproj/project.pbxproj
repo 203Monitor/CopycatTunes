@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E29E3F21EAE136F00CB7F1E /* ModifyAudioVisualizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E29E3F11EAE136F00CB7F1E /* ModifyAudioVisualizer.m */; };
 		0EB645971EAD69A600B7F50B /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB645961EAD69A600B7F50B /* AnimationHelper.m */; };
 		0EB6459A1EAD6C1000B7F50B /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB645991EAD6C1000B7F50B /* UIView+Animation.m */; };
 		0EEE3DBD1EA7740400FC0D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DBC1EA7740400FC0D4D /* main.m */; };
@@ -65,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E29E3F01EAE136F00CB7F1E /* ModifyAudioVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAudioVisualizer.h; sourceTree = "<group>"; };
+		0E29E3F11EAE136F00CB7F1E /* ModifyAudioVisualizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAudioVisualizer.m; sourceTree = "<group>"; };
 		0EB645951EAD69A600B7F50B /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
 		0EB645961EAD69A600B7F50B /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
 		0EB645981EAD6C1000B7F50B /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
@@ -322,6 +325,8 @@
 		0EEE3E051EA774AB00FC0D4D /* DouAudioStreamerUtil */ = {
 			isa = PBXGroup;
 			children = (
+				0E29E3F01EAE136F00CB7F1E /* ModifyAudioVisualizer.h */,
+				0E29E3F11EAE136F00CB7F1E /* ModifyAudioVisualizer.m */,
 				0EEE3E061EA774AB00FC0D4D /* DOUAudioUtil.h */,
 				0EEE3E071EA774AB00FC0D4D /* DOUAudioUtil.m */,
 				0EEE3E081EA774AB00FC0D4D /* Track+Download.h */,
@@ -573,6 +578,7 @@
 				0EEE3E631EA7764B00FC0D4D /* PlayingViewController.m in Sources */,
 				0EEE3E4F1EA774AB00FC0D4D /* YuriNetwork6.m in Sources */,
 				0EEE3E451EA774AB00FC0D4D /* QQSemantic.m in Sources */,
+				0E29E3F21EAE136F00CB7F1E /* ModifyAudioVisualizer.m in Sources */,
 				0EEE3E421EA774AB00FC0D4D /* QQGrp.m in Sources */,
 				0EEE3E471EA774AB00FC0D4D /* QQZhida.m in Sources */,
 				0EEE3E521EA774AB00FC0D4D /* ViewController.m in Sources */,

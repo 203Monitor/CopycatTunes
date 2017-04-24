@@ -34,13 +34,11 @@
         }];
         [self setAnimated:YES];
         [self setTargetView:targetView];
-        NSLog(@"new disposable %@",self.disposable);
     }
 }
 
 - (void)stop {
     [self.disposable dispose];
-    NSLog(@"delete disposable %@",self.disposable);
     self.targetView.transform = CGAffineTransformMakeRotation(self.angle);
     [self setAnimated:NO];
 }

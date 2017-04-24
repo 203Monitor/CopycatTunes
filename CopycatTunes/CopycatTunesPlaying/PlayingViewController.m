@@ -11,7 +11,7 @@
 
 #import "UIView+Animation.h"
 
-#import "DOUAudioVisualizer.h"
+#import "ModifyAudioVisualizer.h"
 
 @interface PlayingViewController ()
 
@@ -107,9 +107,9 @@
     [self playnext];
     [self progress];
     
-    DOUAudioVisualizer *audioVisualizer = [[DOUAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, self.albumCover.bottom, KScreenWidth, self.progress.top - self.albumCover.bottom - 30)];
-    [audioVisualizer setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:audioVisualizer];
+    ModifyAudioVisualizer *modifyaudioVisualizer = [[ModifyAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, self.albumCover.bottom, KScreenWidth, self.progress.top - self.albumCover.bottom - 30)];
+    [modifyaudioVisualizer setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:modifyaudioVisualizer];
 }
 
 - (UIImageView *)albumCover {

@@ -1,22 +1,15 @@
-/* vim: set ft=objc fenc=utf-8 sw=2 ts=2 et: */
-/*
- *  DOUAudioStreamer - A Core Audio based streaming audio player for iOS/Mac:
- *
- *      https://github.com/douban/DOUAudioStreamer
- *
- *  Copyright 2013-2016 Douban Inc.  All rights reserved.
- *
- *  Use and distribution licensed under the BSD license.  See
- *  the LICENSE file for full text.
- *
- *  Authors:
- *      Chongyu Zhu <i@lembacon.com>
- *
- */
+//
+//  DOUAudioVisualizer.m
+//  HalfTunes
+//
+//  Created by 武国斌 on 2017/4/14.
+//  Copyright © 2017年 武国斌. All rights reserved.
+//
+
 
 #if TARGET_OS_IPHONE
 
-#import "DOUAudioVisualizer.h"
+#import "ModifyAudioVisualizer.h"
 #import "DOUAudioStreamer.h"
 #include <Accelerate/Accelerate.h>
 
@@ -24,7 +17,7 @@
 #define kBarHorizontalPadding 2.0
 #define kBarVerticalPadding 1.0
 
-@interface DOUAudioVisualizer () {
+@interface ModifyAudioVisualizer () {
 @private
   struct {
     float current[kDOUAudioAnalyzerLevelCount];
@@ -52,7 +45,7 @@
 }
 @end
 
-@implementation DOUAudioVisualizer
+@implementation ModifyAudioVisualizer
 
 @synthesize stepCount = _stepCount;
 @synthesize interpolationType = _interpolationType;
@@ -287,7 +280,6 @@
   glGenBuffers(1, &_ibo);
 
   glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-  glColor4f(0.784f, 0.867f, 0.839f, 1.0f);
   glColor4f(0.216f, 0.349f, 0.686f, 1.0f);
 
   glEnable(GL_BLEND);
