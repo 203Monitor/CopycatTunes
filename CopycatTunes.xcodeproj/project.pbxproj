@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB645971EAD69A600B7F50B /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB645961EAD69A600B7F50B /* AnimationHelper.m */; };
+		0EB6459A1EAD6C1000B7F50B /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB645991EAD6C1000B7F50B /* UIView+Animation.m */; };
 		0EEE3DBD1EA7740400FC0D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DBC1EA7740400FC0D4D /* main.m */; };
 		0EEE3DC61EA7740400FC0D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC41EA7740400FC0D4D /* Main.storyboard */; };
 		0EEE3DC81EA7740400FC0D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC71EA7740400FC0D4D /* Assets.xcassets */; };
@@ -63,6 +65,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EB645951EAD69A600B7F50B /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
+		0EB645961EAD69A600B7F50B /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
+		0EB645981EAD6C1000B7F50B /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		0EB645991EAD6C1000B7F50B /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 		0EEE3DB81EA7740400FC0D4D /* CopycatTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopycatTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEE3DBC1EA7740400FC0D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0EEE3DC51EA7740400FC0D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +169,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EB645941EAD697900B7F50B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0EB645981EAD6C1000B7F50B /* UIView+Animation.h */,
+				0EB645991EAD6C1000B7F50B /* UIView+Animation.m */,
+				0EB645951EAD69A600B7F50B /* AnimationHelper.h */,
+				0EB645961EAD69A600B7F50B /* AnimationHelper.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		0EEE3DAF1EA7740400FC0D4D = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +305,7 @@
 		0EEE3E011EA774AB00FC0D4D /* YuriFramework */ = {
 			isa = PBXGroup;
 			children = (
+				0EB645941EAD697900B7F50B /* Animation */,
 				0EFAFA1E1EA8C568000CBDF9 /* FMDBUtil */,
 				0EEE3E051EA774AB00FC0D4D /* DouAudioStreamerUtil */,
 				0EEE3E0E1EA774AB00FC0D4D /* UIWindowExtension */,
@@ -536,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB645971EAD69A600B7F50B /* AnimationHelper.m in Sources */,
 				0EEE3E4D1EA774AB00FC0D4D /* UIWindow+Ext.m in Sources */,
 				0EEE3E4E1EA774AB00FC0D4D /* NSDictionary+ToData.m in Sources */,
 				0EEE3E461EA774AB00FC0D4D /* QQSong.m in Sources */,
@@ -543,6 +562,7 @@
 				0EEE3E4A1EA774AB00FC0D4D /* Track+Download.m in Sources */,
 				0EEE3E641EA7764B00FC0D4D /* SearchSongViewController.m in Sources */,
 				0EEE3E431EA774AB00FC0D4D /* QQList.m in Sources */,
+				0EB6459A1EAD6C1000B7F50B /* UIView+Animation.m in Sources */,
 				0EEE3E621EA7764B00FC0D4D /* DownloadSongViewController.m in Sources */,
 				0EEE3E4B1EA774AB00FC0D4D /* Track.m in Sources */,
 				0EEE3E4C1EA774AB00FC0D4D /* Macro.m in Sources */,
