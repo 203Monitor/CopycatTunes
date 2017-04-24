@@ -41,6 +41,7 @@ static NSString *const LocalCell = @"LocalCell";
     [self.datas removeAllObjects];
     
     IS_SHOWHUD(YES);
+    WS(weakSelf);
     [DBOperation queryWithTrack:^(NSArray *obj) {
         for (Track *track in obj) {
             for (NSURL *path in folderContents) {
@@ -53,8 +54,8 @@ static NSString *const LocalCell = @"LocalCell";
                 }
             }
         }
-        [self.datas addObjectsFromArray:obj];
-        [self.tableView reloadData];
+        [weakSelf.datas addObjectsFromArray:obj];
+        [weakSelf.tableView reloadData];
         IS_SHOWHUD(NO);
     }];
     

@@ -60,28 +60,30 @@ static NSString *const SearchCell = @"SearchCell";
 
 - (void)request {
     
+#define QQ true
+    
+#if QQ
+    NSString *api = @"http://s.music.qq.com/fcgi-bin/music_search_new_platform";
+    NSDictionary *params = @{@"t":@"0",
+                             @"n":@"20",//数量
+                             @"p":self.page,//分页
+                             @"aggr":@"1",
+                             @"cr":@"1",
+                             @"loginUin":@"0",
+                             @"format":@"json",
+                             @"inCharset":@"GB2312",
+                             @"outCharset":@"utf-8",
+                             @"notice":@"0",
+                             @"platform":@"jqminiframe.json",
+                             @"needNewCode":@"0",
+                             @"catZhida":@"0",
+                             @"remoteplace":@"sizer.newclient.next_song",
+                             @"w":self.term};
+#else
     NSString *api = @"https://itunes.apple.com/search";
     NSDictionary *params = @{@"media":@"music",@"entity":self.entity,@"term":self.term};
-    
-    
-//    NSString *api = @"http://s.music.qq.com/fcgi-bin/music_search_new_platform";
-//    NSDictionary *params = @{@"t":@"0",
-//                              @"n":@"20",//数量
-//                              @"p":self.page,//分页
-//                              @"aggr":@"1",
-//                              @"cr":@"1",
-//                              @"loginUin":@"0",
-//                              @"format":@"json",
-//                              @"inCharset":@"GB2312",
-//                              @"outCharset":@"utf-8",
-//                              @"notice":@"0",
-//                              @"platform":@"jqminiframe.json",
-//                              @"needNewCode":@"0",
-//                              @"catZhida":@"0",
-//                              @"remoteplace":@"sizer.newclient.next_song",
-//                              @"w":self.term};
-    
-    
+#endif
+
 //    WS(weakSelf);
 //    IS_SHOWHUD(YES);
 //    YuriNetwork7 *request = [[YuriNetwork7 alloc] init];
@@ -107,11 +109,14 @@ static NSString *const SearchCell = @"SearchCell";
     [manager GET:api parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         ;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        QQBaseClass *model = [QQBaseClass objectFromData:responseObject];
-//        [weakSelf suffexWithDatas:[model tracks]];
         
+#if QQ
+        QQBaseClass *model = [QQBaseClass objectFromData:responseObject];
+        [weakSelf suffexWithDatas:[model tracks]];
+#else
         ITunesSongList *model = [ITunesSongList objectFromData:responseObject];
         [weakSelf suffexWithDatas:[model tracks]];
+#endif
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);

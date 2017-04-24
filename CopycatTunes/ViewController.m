@@ -57,11 +57,12 @@
     [jump setFrame:CGRectMake(0, 134, 100, 150)];
     [jump setLeft:borderVeiw.left];
     [self.view addSubview:jump];
+    WS(weakSelf);
     [jump addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
         SearchSongViewController *table = [[SearchSongViewController alloc] init];
         [table setEntity:@"song"];
-        [table setTerm:self.textField.text];
-        [self.navigationController pushViewController:table animated:YES];
+        [table setTerm:weakSelf.textField.text];
+        [weakSelf.navigationController pushViewController:table animated:YES];
     }];
     
     UIButton *down = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -71,7 +72,7 @@
     [self.view addSubview:down];
     [down addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
         DownloadSongViewController *dvc = [[DownloadSongViewController alloc] init];
-        [self.navigationController pushViewController:dvc animated:YES];
+        [weakSelf.navigationController pushViewController:dvc animated:YES];
     }];
 }
 

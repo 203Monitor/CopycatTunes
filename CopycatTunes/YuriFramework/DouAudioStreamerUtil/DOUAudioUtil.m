@@ -41,7 +41,7 @@
 //                    [_buttonPlayPause setTitle:@"Pause" forState:UIControlStateNormal];
                     if (weakSelf.playingCallBack) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.playingCallBack(self.streamer);
+                            weakSelf.playingCallBack(weakSelf.streamer);
                         });
                     }
                     
@@ -50,9 +50,9 @@
                 case DOUAudioStreamerPaused:
                     NSLog(@"player stated : paused");
 //                    [_buttonPlayPause setTitle:@"Play" forState:UIControlStateNormal];
-                    if (self.pauseCallBack) {
+                    if (weakSelf.pauseCallBack) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.pauseCallBack(nil);
+                            weakSelf.pauseCallBack(nil);
                         });
                     }
                     
@@ -69,7 +69,7 @@
 //                    [self _actionNext:nil];
                     if (weakSelf.finishCallBack) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            self.finishCallBack(self.streamer);
+                            weakSelf.finishCallBack(weakSelf.streamer);
                         });
                     }
                     

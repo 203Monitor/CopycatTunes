@@ -9,6 +9,10 @@
 #import "PlayingViewController.h"
 #import "Track.h"
 
+#import "UIView+Animation.h"
+
+#import "DOUAudioVisualizer.h"
+
 @interface PlayingViewController ()
 
 @property (nonatomic, strong) Track *track;
@@ -21,6 +25,8 @@
 @property (nonatomic, strong) UIProgressView *progress;
 @property (nonatomic, strong) UILabel *duration;
 @property (nonatomic, strong) UILabel *currentTime;
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -37,6 +43,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self timer];
     
     [self setTitle:[self.track title]];
     [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -55,17 +63,22 @@
         [self.play setSelected:NO];
     }
     
+    if ([kAppDelegate.audioUtil isPlaying]) {
+        [self.albumCover doRotate];
+    }
+    
     WS(weakSelf);
     [kAppDelegate.audioUtil setPlayingCallBack:^(DOUAudioStreamer *obj){
-        NSLog(@"%f",obj.currentTime/obj.duration);
-        [weakSelf.progress setProgress:obj.currentTime/obj.duration];
-        [weakSelf.duration setText:kAppDelegate.audioUtil.duration];
-        [weakSelf.currentTime setText:kAppDelegate.audioUtil.currentTime];
+        [weakSelf.albumCover doRotate];
+    }];
+    
+    [kAppDelegate.audioUtil setPauseCallBack:^(id obj) {
+        [weakSelf.albumCover stopRotate];
     }];
     
     [kAppDelegate.audioUtil setFinishCallBack:^(id obj){
 //        [weakSelf.play setSelected:NO];
-        
+        [weakSelf.albumCover stopRotate];
         if (weakSelf.list.count) {
             if (weakSelf.index + 1 == weakSelf.list.count) {
                 [weakSelf setIndex:-1];
@@ -73,10 +86,18 @@
             Track *track = [weakSelf.list objectAtIndex:++weakSelf.index];
             [kAppDelegate.audioUtil playWithTrack:track];
             [weakSelf setTitle:track.title];
+            [weakSelf.albumCover sd_setImageWithURL:[track cover] placeholderImage:[UIImage imageNamed:@"default_cover_play.jpg"]];
         }else {
             [kAppDelegate.audioUtil play];
         }
     }];
+}
+
+- (NSTimer *)timer {
+    if (!_timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(_timerAction:) userInfo:nil repeats:YES];
+    }
+    return _timer;
 }
 
 - (void)initUI {
@@ -85,18 +106,26 @@
     [self playprev];
     [self playnext];
     [self progress];
+    
+    DOUAudioVisualizer *audioVisualizer = [[DOUAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, self.albumCover.bottom, KScreenWidth, self.progress.top - self.albumCover.bottom - 30)];
+    [audioVisualizer setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:audioVisualizer];
 }
 
 - (UIImageView *)albumCover {
     if (!_albumCover) {
-        _albumCover = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth * 0.6, kScreenWidth * 0.6)];
+        _albumCover = [[UIImageView alloc] initWithFrame:CGRectMake(0, 84, kScreenWidth * 0.6, kScreenWidth * 0.6)];
         [_albumCover setCenterX:self.view.centerX];
         [self.view addSubview:_albumCover];
         
+        [_albumCover.layer setCornerRadius:kScreenWidth * 0.3];
+        [_albumCover.layer setMasksToBounds:YES];
         [_albumCover setUserInteractionEnabled:YES];
+        
         [_albumCover addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
             [kAppDelegate.audioUtil download];
         }]];
+        
     }
     return _albumCover;
 }
@@ -106,7 +135,7 @@
         _play = [UIButton buttonWithType:UIButtonTypeSystem];
         [_play setFrame:CGRectMake(0, 0, 100, 100)];
         [_play setCenterX:self.view.centerX];
-        [_play setCenterY:kScreenHeight * 0.8];
+        [_play setCenterY:kScreenHeight - 50 - 30];
         [_play setImage:[[[UIImage imageNamed:@"btn_play"] imageByResizeToSize:CGSizeMake(100, 100)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
         [_play setImage:[[[UIImage imageNamed:@"btn_pause"] imageByResizeToSize:CGSizeMake(100, 100)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateSelected];
         
@@ -140,7 +169,7 @@
         _playprev = [UIButton buttonWithType:UIButtonTypeSystem];
         [_playprev setFrame:CGRectMake(0, 0, 50, 50)];
         [_playprev setCenterX:kScreenWidth / 4];
-        [_playprev setCenterY:kScreenHeight * 0.8];
+        [_playprev setCenterY:kScreenHeight - 50 - 30];
         [_playprev setImage:[[UIImage imageNamed:@"btn_play_prev"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
         [self.view addSubview:_playprev];
         [_playprev addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
@@ -155,7 +184,7 @@
         _playnext = [UIButton buttonWithType:UIButtonTypeSystem];
         [_playnext setFrame:CGRectMake(0, 0, 50, 50)];
         [_playnext setCenterX:kScreenWidth / 4 * 3];
-        [_playnext setCenterY:kScreenHeight * 0.8];
+        [_playnext setCenterY:kScreenHeight - 50 - 30];
         [_playnext setImage:[[UIImage imageNamed:@"btn_play_next"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
         [self.view addSubview:_playnext];
         [_playnext addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
@@ -182,6 +211,7 @@
         [_duration setCenterY:self.play.centerY - 50];
         [_duration setTextAlignment:NSTextAlignmentRight];
         [_duration setFont:[UIFont systemFontOfSize:10]];
+        [_duration setTextColor:[UIColor brownColor]];
         [self.view addSubview:_duration];
     }
     return _duration;
@@ -194,9 +224,25 @@
         [_currentTime setCenterY:self.play.centerY - 50];
         [_currentTime setTextAlignment:NSTextAlignmentLeft];
         [_currentTime setFont:[UIFont systemFontOfSize:10]];
+        [_currentTime setTextColor:[UIColor brownColor]];
         [self.view addSubview:_currentTime];
     }
     return _currentTime;
+}
+
+- (void)_timerAction:(id)timer {
+    if (kAppDelegate.audioUtil.progress == 0.0) {
+        [self.progress setProgress:0.0f];
+    }else {
+        [self.progress setProgress:kAppDelegate.audioUtil.progress];
+        [self.duration setText:kAppDelegate.audioUtil.duration];
+        [self.currentTime setText:kAppDelegate.audioUtil.currentTime];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.timer invalidate];
 }
 
 - (void)didReceiveMemoryWarning {

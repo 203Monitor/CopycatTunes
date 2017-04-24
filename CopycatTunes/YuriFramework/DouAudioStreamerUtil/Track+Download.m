@@ -29,6 +29,7 @@
     //请求
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
+    WS(weakSelf);
     //下载Task操作
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -51,7 +52,7 @@
         NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         NSArray *suffix = [response.suggestedFilename componentsSeparatedByString:@"."];
         
-        NSString *path = [cachesPath stringByAppendingPathComponent:[[self.trackId stringByAppendingString:@"."] stringByAppendingString:[suffix lastObject]]];
+        NSString *path = [cachesPath stringByAppendingPathComponent:[[weakSelf.trackId stringByAppendingString:@"."] stringByAppendingString:[suffix lastObject]]];
         return [NSURL fileURLWithPath:path];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
@@ -59,7 +60,7 @@
         // filePath就是你下载文件的位置，你可以解压，也可以直接拿来使用
         NSString *getfilePath = [filePath path];// 将NSURL转成NSString
         NSLog(@"%@",getfilePath);
-        [DBOperation insertWithTrack:self];
+        [DBOperation insertWithTrack:weakSelf];
     }];
     
     [downloadTask resume];
