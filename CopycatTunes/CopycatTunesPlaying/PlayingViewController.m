@@ -109,6 +109,7 @@
     
     ModifyAudioVisualizer *modifyaudioVisualizer = [[ModifyAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, self.albumCover.bottom, KScreenWidth, self.progress.top - self.albumCover.bottom - 30)];
     [modifyaudioVisualizer setBackgroundColor:[UIColor clearColor]];
+    
     [self.view addSubview:modifyaudioVisualizer];
 }
 

@@ -149,7 +149,14 @@
 }
 
 - (void)download {
-    [self.track downloadFromServer];
+    [DBOperation queryTrackWithtrackId:self.trackId andCallback:^(BOOL isDownload) {
+        if (isDownload) {
+            showSystemAlert(@"已下载", nil);
+        }else {
+            showSystemAlert(@"下载中...", nil);
+            [self.track downloadFromServer];
+        }
+    }];
 }
 
 @end

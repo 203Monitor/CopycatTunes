@@ -42,7 +42,7 @@ static NSString *const LocalCell = @"LocalCell";
     
     IS_SHOWHUD(YES);
     WS(weakSelf);
-    [DBOperation queryWithTrack:^(NSArray *obj) {
+    [DBOperation queryTracks:^(NSArray *obj) {
         for (Track *track in obj) {
             for (NSURL *path in folderContents) {
 //        NSDictionary *dict = [fileManager attributesOfItemAtPath:[path path] error:nil];

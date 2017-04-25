@@ -78,33 +78,7 @@ NSString *const insertSQL = @"INSERT INTO SONGS (ARTIST, TITLE, TRACKID, PRECOVE
     }
 }
 
-+ (Track *)queryWithTrackId:(NSString *)trackId {
-    if ([DB open]) {
-        NSString * sql = [NSString stringWithFormat:
-                          @"SELECT * FROM %@ WHERE %@ = '%@'",TABLENAME,TRACKID,trackId];
-//        sql = [NSString stringWithFormat:@"SELECT * FROM %@",TABLENAME];
-        FMResultSet * rs = [DB executeQuery:sql];
-        
-        while ([rs next]) {
-            Track *track = [[Track alloc] init];
-            int Id = [rs intForColumn:@"ID"];
-            NSLog(@"%i",Id);
-            NSLog(@"%@",[rs stringForColumn:TITLE]);
-            
-            [track setArtist:[rs stringForColumn:ARTIST]];
-            [track setTitle:[rs stringForColumn:TITLE]];
-            [track setTrackId:[rs stringForColumn:TRACKID]];
-            [track setPreCover:[NSURL URLWithString:[rs stringForColumn:PRECOVER]]];
-            [track setCover:[NSURL URLWithString:[rs stringForColumn:COVER]]];
-            [track setAudioFileURL:[NSURL URLWithString:[rs stringForColumn:AUDIOFILEURL]]];
-            return track;
-        }
-        [DB close];
-    }
-    return [[Track alloc] init];
-}
-
-+ (void)queryWithTrack:(void(^)(NSArray *obj))callback {
++ (void)queryTracks:(void(^)(NSArray *obj))callback {
     if ([DB open]) {
         NSMutableArray *array = [NSMutableArray array];
         
@@ -124,6 +98,22 @@ NSString *const insertSQL = @"INSERT INTO SONGS (ARTIST, TITLE, TRACKID, PRECOVE
             NSLog(@"%@",[rs stringForColumn:TITLE]);
         }
         callback(array);
+        [DB close];
+    }
+}
+
++ (void)queryTrackWithtrackId:(NSString *)trackId andCallback:(void(^)(BOOL isDownload))callback {
+    if ([DB open]) {
+        NSString * sql = [NSString stringWithFormat:
+                          @"SELECT * FROM %@ where %@=%@",TABLENAME,TRACKID,trackId];
+        FMResultSet * rs = [DB executeQuery:sql];
+        if ([rs next]) {
+            NSLog(@"%@",[rs stringForColumn:TITLE]);
+            callback(YES);
+        }else {
+            callback(NO);
+        }
+        
         [DB close];
     }
 }

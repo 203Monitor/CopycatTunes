@@ -16,6 +16,8 @@
 #define FOLDER @"/files"
 #define IDENTIFIER @"IDENTIFIER"
 
+#define MUSICCACHEROOT [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
 #define kAUTOLAYOUTSCALE ([UIScreen mainScreen].bounds.size.width / 375.0)
 #define SCALE(X) (kAUTOLAYOUTSCALE * X)
 
@@ -30,8 +32,6 @@ HUD_SHOW; \
 } else { \
 HUD_HIDE; \
 }
-
-#define MUSICCACHEROOT [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 typedef void(^CallBack)(id obj);
 

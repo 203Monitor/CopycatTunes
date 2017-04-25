@@ -13,7 +13,7 @@
 
 + (void)DBInit;
 + (void)insertWithTrack:(Track *)track;
-+ (Track *)queryWithTrackId:(NSString *)trackId;
-+ (void)queryWithTrack:(void(^)(NSArray *obj))callback;
++ (void)queryTracks:(void(^)(NSArray *obj))callback;
++ (void)queryTrackWithtrackId:(NSString *)trackId andCallback:(void(^)(BOOL isDownload))callback;
 
 @end

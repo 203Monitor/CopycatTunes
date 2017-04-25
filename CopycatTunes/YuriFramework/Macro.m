@@ -33,6 +33,18 @@ inline bool predicateIsMobilePhone(NSString * mobilePhone) {
     return [validateTest evaluateWithObject:mobilePhone];
 }
 
+inline void showSystemAlert(NSString * title,NSString *message) {
+    if (kOS_iOS9) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:okAction];
+        [kWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    }else {
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil , nil];
+        [alertView show];
+    }
+}
+
 //NSString *const test = @"http://s3.sinaimg.cn/mw690/001IkOa7gy6Jcn918EG22&690";
 
 NSString *test = @"http://s3.sinaimg.cn/mw690/001IkOa7gy6Jcn918EG22&690";
