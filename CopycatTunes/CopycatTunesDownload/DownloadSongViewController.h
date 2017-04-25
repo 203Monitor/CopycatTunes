@@ -6,8 +6,8 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface DownloadSongViewController : UITableViewController
+@interface DownloadSongViewController : BaseTableViewController
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : BaseViewController
 
 @end
 

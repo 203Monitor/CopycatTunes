@@ -6,10 +6,10 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 @class Track;
 
-@interface PlayingViewController : UIViewController
+@interface PlayingViewController : BaseViewController
 
 - (instancetype)initWithModel:(Track *)model;
 

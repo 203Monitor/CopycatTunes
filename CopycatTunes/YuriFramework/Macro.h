@@ -66,9 +66,24 @@ __LINE__, __func__);                                                        \
 fprintf(stderr, "-------\n");                                               \
 } while (0)
 
+#define deallocLog(obj) do {\
+NSString *className = [[obj class] description];\
+NSInteger counts = ([className length] % 2 == 0) ? ([className length] / 2) : (([className length] + 1) / 2);\
+NSString *minusStar = @"-*";\
+for (NSInteger count = 0; count < counts + 4; count++) {\
+    minusStar = [minusStar stringByAppendingString:@"-*"];\
+}\
+minusStar = [minusStar stringByAppendingString:@"-"];\
+fprintf(stderr, "%s\n\n", [minusStar UTF8String]);\
+fprintf(stderr, "%s\n\n", [[className stringByAppendingString:@" dealloc"] UTF8String]);\
+fprintf(stderr, "%s\n", [minusStar UTF8String]);\
+fprintf(stderr, "-------\n");\
+} while (0)
+
 #else
 
-# define NSLog(...) {}
+#define NSLog(...) {}
+#define deallocLog(class) {}
 
 #endif
 

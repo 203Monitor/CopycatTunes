@@ -6,9 +6,9 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface SearchSongViewController : UITableViewController
+@interface SearchSongViewController : BaseTableViewController
 
 @property (nonatomic, copy) NSString *entity;
 @property (nonatomic, copy) NSString *term;
