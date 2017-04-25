@@ -102,6 +102,11 @@
     [self.streamer stop];
     [self setStreamer:nil];
     [[self.streamer initWithAudioFile:track] play];
+    [(Track *)track setDownloadingCallBack:^(float downloadPrecent) {
+        if (self.downloadingCallBack) {
+            self.downloadingCallBack(downloadPrecent);
+        }
+    }];
 }
 
 - (void)play {

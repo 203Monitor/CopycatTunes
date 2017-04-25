@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) Track *track;
 
+@property (nonatomic, strong) UIView *albumCoverView;
 @property (nonatomic, strong) UIImageView *albumCover;
 @property (nonatomic, strong) UIButton *playprev;
 @property (nonatomic, strong) UIButton *play;
@@ -91,6 +92,10 @@
             [kAppDelegate.audioUtil play];
         }
     }];
+    
+    [kAppDelegate.audioUtil setDownloadingCallBack:^(float downloadPrecent) {
+        NSLog(@"isdownloading : %f",downloadPrecent);
+    }];
 }
 
 - (NSTimer *)timer {
@@ -113,20 +118,32 @@
     [self.view addSubview:modifyaudioVisualizer];
 }
 
+- (UIView *)albumCoverView {
+    if (!_albumCoverView) {
+        _albumCoverView = [[UIView alloc] initWithFrame:CGRectMake(0, 84, kScreenWidth * 0.6, kScreenWidth * 0.6)];
+        [_albumCoverView setCenterX:self.view.centerX];
+        
+        [_albumCoverView.layer setCornerRadius:kScreenWidth * 0.3];
+        [_albumCoverView.layer setMasksToBounds:YES];
+        
+        [self.view addSubview:_albumCoverView];
+        
+        UIView *gray = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.albumCoverView.width, self.albumCoverView.height)];
+        [gray setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+        [_albumCoverView addSubview:gray];
+    }
+    return _albumCoverView;
+}
+
 - (UIImageView *)albumCover {
     if (!_albumCover) {
-        _albumCover = [[UIImageView alloc] initWithFrame:CGRectMake(0, 84, kScreenWidth * 0.6, kScreenWidth * 0.6)];
-        [_albumCover setCenterX:self.view.centerX];
-        [self.view addSubview:_albumCover];
+        _albumCover = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.albumCoverView.width, self.albumCoverView.height)];
+        [self.albumCoverView addSubview:_albumCover];
         
-        [_albumCover.layer setCornerRadius:kScreenWidth * 0.3];
-        [_albumCover.layer setMasksToBounds:YES];
         [_albumCover setUserInteractionEnabled:YES];
-        
         [_albumCover addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
             [kAppDelegate.audioUtil download];
         }]];
-        
     }
     return _albumCover;
 }

@@ -11,6 +11,9 @@
 
 @interface Track : NSObject <DOUAudioFile>
 
+@property (nonatomic, copy) void(^downloadingCallBack)(float downloadPrecent);
+- (void)setDownloadingCallBack:(void (^)(float downloadPrecent))downloadingCallBack;
+
 @property (nonatomic, copy) NSString *artist;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *trackId;
@@ -19,5 +22,6 @@
 @property (nonatomic, copy) NSURL *audioFileURL;
 
 - (BOOL)isNowPlaying;
+
 
 @end

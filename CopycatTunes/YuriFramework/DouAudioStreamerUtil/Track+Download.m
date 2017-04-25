@@ -36,13 +36,13 @@
         // @property int64_t totalUnitCount;     需要下载文件的总大小
         // @property int64_t completedUnitCount; 当前已经下载的大小
         
-        // 给Progress添加监听 KVO
-        NSLog(@"%f",1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
         // 回到主队列刷新UI
         dispatch_async(dispatch_get_main_queue(), ^{
-            // 设置进度条的百分比
-            float progress = 1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount;
-            NSLog(@"%f",progress);
+            // 设置进度的回调
+            if (self.downloadingCallBack) {
+                float progress = 1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount;
+                self.downloadingCallBack(progress);
+            }
         });
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
