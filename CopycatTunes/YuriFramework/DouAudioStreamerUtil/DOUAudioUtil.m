@@ -154,11 +154,11 @@
 }
 
 - (void)download {
-    [DBOperation queryTrackWithtrackId:self.trackId andCallback:^(BOOL isDownload) {
-        if (isDownload) {
+    [self.track hadDownloadWithBlock:^(BOOL hadDownload) {
+        if (hadDownload) {
             showSystemAlert(@"已下载", nil);
         }else {
-            showSystemAlert(@"下载中...", nil);
+            showSystemAlert(@"开始下载", nil);
             [self.track downloadFromServer];
         }
     }];
