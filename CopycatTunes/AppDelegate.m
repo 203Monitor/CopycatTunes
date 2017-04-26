@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "BaseNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -29,7 +30,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window WindowInit];
     ViewController *vc = [[ViewController alloc] init];
-    UINavigationController *root = [[UINavigationController alloc] initWithRootViewController:vc];
+    BaseNavigationController *root = [[BaseNavigationController alloc] initWithRootViewController:vc];
     [self.window setRootViewController:root];
     
     [self.window makeKeyAndVisible];

@@ -16,7 +16,7 @@ inline NSURL *URLWith(NSString *urlString) {
     }
 }
 
-inline UIColor * getBackGoundColor(CGFloat r,CGFloat g,CGFloat b,CGFloat alpha) {
+inline UIColor * getColor(CGFloat r,CGFloat g,CGFloat b,CGFloat alpha) {
     return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:alpha];
 }
 

@@ -170,8 +170,8 @@
         [_play setFrame:CGRectMake(0, 0, 100, 100)];
         [_play setCenterX:self.view.centerX];
         [_play setCenterY:kScreenHeight - 50 - 30];
-        [_play setImage:[[[UIImage imageNamed:@"btn_play"] imageByResizeToSize:CGSizeMake(100, 100)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
-        [_play setImage:[[[UIImage imageNamed:@"btn_pause"] imageByResizeToSize:CGSizeMake(100, 100)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateSelected];
+        [_play setImage:[[[UIImage imageNamed:@"btn_play.png"] imageByResizeToSize:CGSizeMake(100, 100)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [_play setImage:[[[UIImage imageNamed:@"btn_pause.png"] imageByResizeToSize:CGSizeMake(100, 100)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateSelected];
         
 //        UIImage *image = [UIImage imageWithSize:CGSizeMake(100, 100) drawBlock:^(CGContextRef  _Nonnull context) {
 //            CGContextSetLineWidth(context, 2);
@@ -204,7 +204,7 @@
         [_playprev setFrame:CGRectMake(0, 0, 50, 50)];
         [_playprev setCenterX:kScreenWidth / 4];
         [_playprev setCenterY:kScreenHeight - 50 - 30];
-        [_playprev setImage:[[UIImage imageNamed:@"btn_play_prev"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [_playprev setImage:[[UIImage imageNamed:@"play_prev_.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
         [self.view addSubview:_playprev];
         [_playprev addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
             [kAppDelegate.audioUtil seek:(-10)];
@@ -219,7 +219,7 @@
         [_playnext setFrame:CGRectMake(0, 0, 50, 50)];
         [_playnext setCenterX:kScreenWidth / 4 * 3];
         [_playnext setCenterY:kScreenHeight - 50 - 30];
-        [_playnext setImage:[[UIImage imageNamed:@"btn_play_next"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [_playnext setImage:[[UIImage imageNamed:@"play_next_.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
         [self.view addSubview:_playnext];
         [_playnext addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
             [kAppDelegate.audioUtil seek:(10)];
@@ -231,6 +231,7 @@
 - (UIProgressView *)progress {
     if (!_progress) {
         _progress = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth / 4 * 3, 5)];
+        [_progress setProgressTintColor:MainColor(1)];
         [_progress setCenterY:self.play.centerY - 80];
         [_progress setCenterX:self.view.centerX];
         [self.view addSubview:_progress];

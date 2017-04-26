@@ -76,11 +76,7 @@ fprintf(stderr, "-------\n");\
 
 #define WS(weakSelf)  __weak __typeof(self)weakSelf = self
 
-#define show(string)    if ([string isKindOfClass:[NSString class]]) { \
-NSLog(@"show string: %@",string); \
-}else { \
-NSLog(@"no string"); \
-}
+#define ImageNamed(name) [[UIImage imageNamed:name] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
 
 #define URL(string)    [string isKindOfClass:[NSString class]] ? \
 [NSURL URLWithString:string] : \

@@ -281,6 +281,7 @@
 
   glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
   glColor4f(0.216f, 0.349f, 0.686f, 1.0f);
+  glColor4f(0.8f, 0.145f, 0.482f, 1.0f);
 
   glEnable(GL_BLEND);
   glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);

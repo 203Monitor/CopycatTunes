@@ -18,7 +18,7 @@ extern NSString *three;
 extern NSURL *URLWith(NSString *urlString);
 
 #pragma mark - 通过RGB获得一个颜色
-extern UIColor * getBackGoundColor(CGFloat r,CGFloat g,CGFloat b,CGFloat alpha);
+extern UIColor * getColor(CGFloat r,CGFloat g,CGFloat b,CGFloat alpha);
 
 #pragma mark - 验证手机号
 extern bool predicateIsMobilePhone(NSString * mobilePhone);

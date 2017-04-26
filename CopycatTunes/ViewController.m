@@ -17,9 +17,10 @@
 
 - (void)setbuttonWithTitle:(NSString *)title {
     [self setTitle:title forState:UIControlStateNormal];
+    [self setTintColor:MainColor(1)];
     [self.layer setCornerRadius:5];
     [self.layer setBorderWidth:3];
-    [self.layer setBorderColor:[[UIColor cyanColor] colorWithAlphaComponent:0.3].CGColor];
+    [self.layer setBorderColor:MainColor(0.5).CGColor];
 }
 
 @end
@@ -40,7 +41,7 @@
     [self.view setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
     UIView *borderVeiw = [[UIView alloc] initWithFrame:CGRectMake(20, 74, kScreenWidth - 40, 40)];
-    [borderVeiw.layer setBorderColor:[[UIColor blackColor] colorWithAlphaComponent:0.5].CGColor];
+    [borderVeiw.layer setBorderColor:MainColor(0.5).CGColor];
     [borderVeiw.layer setBorderWidth:2];
     [borderVeiw.layer setCornerRadius:3];
     [self.view addSubview:borderVeiw];
@@ -49,6 +50,7 @@
     [searchTerm setClearButtonMode:UITextFieldViewModeWhileEditing];
     [borderVeiw addSubview:searchTerm];
     _textField = searchTerm;
+    [_textField setTextColor:MainColor(1)];
     
     [_textField setText:@"shape of you"];
     [_textField setText:@"玻璃珠"];

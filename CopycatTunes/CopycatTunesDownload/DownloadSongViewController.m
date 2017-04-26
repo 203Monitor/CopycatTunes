@@ -26,6 +26,8 @@ static NSString *const LocalCell = @"LocalCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setTitle:@"本地下载"];
+    
     [self.tableView registerClass:[SongTableViewCell class] forCellReuseIdentifier:@"LocalCell"];
     [self.tableView setTableFooterView:[UIView new]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];

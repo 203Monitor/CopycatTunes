@@ -37,6 +37,8 @@ static NSString *const SearchCell = @"SearchCell";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    [self setTitle:[NSString stringWithFormat:@"\"%@\"搜索结果",self.term]];
+    
     [self.tableView registerClass:[SongTableViewCell class] forCellReuseIdentifier:SearchCell];
     [self.tableView setTableFooterView:[UIView new]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];

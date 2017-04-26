@@ -41,6 +41,7 @@
 - (UILabel *)trackNameLabel {
     if (!_trackNameLabel) {
         _trackNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 15, kScreenWidth - 60, 30)];
+        [_trackNameLabel setTextColor:MainColor(1)];
         [_trackNameLabel setFont:[UIFont boldSystemFontOfSize:15]];
         [self.contentView addSubview:_trackNameLabel];
     }
@@ -50,6 +51,7 @@
 - (UILabel *)artistLabel {
     if (!_artistLabel) {
         _artistLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 45, kScreenWidth - 60, 20)];
+        [_artistLabel setTextColor:MainColor(0.5)];
         [_artistLabel setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:_artistLabel];
     }
@@ -77,7 +79,7 @@
     [mPath moveToPoint:CGPointMake(0, height)]; //创建一个点
     [mPath addLineToPoint:CGPointMake(kScreenWidth, height)]; // 加条线,从点移动到另一个点
     [mPath closePath]; // 关闭贝塞尔线
-    UIColor *stroke = [UIColor blackColor];               //设置红色画笔线
+    UIColor *stroke = MainColor(1); //设置红色画笔线
     [stroke set];                                       //填充颜色
     [mPath stroke];
 }
