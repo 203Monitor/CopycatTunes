@@ -14,8 +14,10 @@
 
 #import "AppDelegate.h"
 #import "UIWindow+Ext.h"
-#import "Define.h"
-#import "Macro.h"
+
+#import "ConstDefine.h"
+#import "YuriMacro.h"
+#import "YuriFunction.h"
 
 #import "DBOperation.h"
 

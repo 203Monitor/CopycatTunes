@@ -52,7 +52,7 @@
 		0EEE3E491EA774AB00FC0D4D /* DOUAudioUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E071EA774AB00FC0D4D /* DOUAudioUtil.m */; };
 		0EEE3E4A1EA774AB00FC0D4D /* Track+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E091EA774AB00FC0D4D /* Track+Download.m */; };
 		0EEE3E4B1EA774AB00FC0D4D /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E0B1EA774AB00FC0D4D /* Track.m */; };
-		0EEE3E4C1EA774AB00FC0D4D /* Macro.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E0D1EA774AB00FC0D4D /* Macro.m */; };
+		0EEE3E4C1EA774AB00FC0D4D /* YuriFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E0D1EA774AB00FC0D4D /* YuriFunction.m */; };
 		0EEE3E4D1EA774AB00FC0D4D /* UIWindow+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E101EA774AB00FC0D4D /* UIWindow+Ext.m */; };
 		0EEE3E4E1EA774AB00FC0D4D /* NSDictionary+ToData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E131EA774AB00FC0D4D /* NSDictionary+ToData.m */; };
 		0EEE3E4F1EA774AB00FC0D4D /* YuriNetwork6.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3E151EA774AB00FC0D4D /* YuriNetwork6.m */; };
@@ -72,6 +72,7 @@
 		0E04013B1EAF60A900145188 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		0E04013D1EAF610F00145188 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		0E04013E1EAF610F00145188 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		0E0401401EB0721300145188 /* YuriMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YuriMacro.h; sourceTree = "<group>"; };
 		0E29E3F01EAE136F00CB7F1E /* ModifyAudioVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAudioVisualizer.h; sourceTree = "<group>"; };
 		0E29E3F11EAE136F00CB7F1E /* ModifyAudioVisualizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAudioVisualizer.m; sourceTree = "<group>"; };
 		0EB645951EAD69A600B7F50B /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
@@ -129,15 +130,15 @@
 		0EEE3E001EA774AB00FC0D4D /* QQZhida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZhida.m; sourceTree = "<group>"; };
 		0EEE3E021EA774AB00FC0D4D /* CSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSJSONModel.h; sourceTree = "<group>"; };
 		0EEE3E031EA774AB00FC0D4D /* CSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSJSONModel.m; sourceTree = "<group>"; };
-		0EEE3E041EA774AB00FC0D4D /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		0EEE3E041EA774AB00FC0D4D /* ConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstDefine.h; sourceTree = "<group>"; };
 		0EEE3E061EA774AB00FC0D4D /* DOUAudioUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOUAudioUtil.h; sourceTree = "<group>"; };
 		0EEE3E071EA774AB00FC0D4D /* DOUAudioUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOUAudioUtil.m; sourceTree = "<group>"; };
 		0EEE3E081EA774AB00FC0D4D /* Track+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+Download.h"; sourceTree = "<group>"; };
 		0EEE3E091EA774AB00FC0D4D /* Track+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+Download.m"; sourceTree = "<group>"; };
 		0EEE3E0A1EA774AB00FC0D4D /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
 		0EEE3E0B1EA774AB00FC0D4D /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
-		0EEE3E0C1EA774AB00FC0D4D /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
-		0EEE3E0D1EA774AB00FC0D4D /* Macro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Macro.m; sourceTree = "<group>"; };
+		0EEE3E0C1EA774AB00FC0D4D /* YuriFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuriFunction.h; sourceTree = "<group>"; };
+		0EEE3E0D1EA774AB00FC0D4D /* YuriFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuriFunction.m; sourceTree = "<group>"; };
 		0EEE3E0F1EA774AB00FC0D4D /* UIWindow+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Ext.h"; sourceTree = "<group>"; };
 		0EEE3E101EA774AB00FC0D4D /* UIWindow+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Ext.m"; sourceTree = "<group>"; };
 		0EEE3E121EA774AB00FC0D4D /* NSDictionary+ToData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ToData.h"; sourceTree = "<group>"; };
@@ -333,9 +334,10 @@
 				0EEE3E111EA774AB00FC0D4D /* YuriNetwork */,
 				0EEE3E021EA774AB00FC0D4D /* CSJSONModel.h */,
 				0EEE3E031EA774AB00FC0D4D /* CSJSONModel.m */,
-				0EEE3E041EA774AB00FC0D4D /* Define.h */,
-				0EEE3E0C1EA774AB00FC0D4D /* Macro.h */,
-				0EEE3E0D1EA774AB00FC0D4D /* Macro.m */,
+				0EEE3E041EA774AB00FC0D4D /* ConstDefine.h */,
+				0E0401401EB0721300145188 /* YuriMacro.h */,
+				0EEE3E0C1EA774AB00FC0D4D /* YuriFunction.h */,
+				0EEE3E0D1EA774AB00FC0D4D /* YuriFunction.m */,
 			);
 			path = YuriFramework;
 			sourceTree = "<group>";
@@ -588,7 +590,7 @@
 				0EB6459A1EAD6C1000B7F50B /* UIView+Animation.m in Sources */,
 				0EEE3E621EA7764B00FC0D4D /* DownloadSongViewController.m in Sources */,
 				0EEE3E4B1EA774AB00FC0D4D /* Track.m in Sources */,
-				0EEE3E4C1EA774AB00FC0D4D /* Macro.m in Sources */,
+				0EEE3E4C1EA774AB00FC0D4D /* YuriFunction.m in Sources */,
 				0EEE3E3E1EA774AB00FC0D4D /* ITunesSong.m in Sources */,
 				0EEE3DBD1EA7740400FC0D4D /* main.m in Sources */,
 				0EEE3E3F1EA774AB00FC0D4D /* ITunesSongList.m in Sources */,

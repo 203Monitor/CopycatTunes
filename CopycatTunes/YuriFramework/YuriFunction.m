@@ -6,14 +6,7 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import "Macro.h"
-
-inline NSString *ISOK(BOOL key) {
-    if (key) {
-        return @"OK";
-    }
-    return @"NOT";
-}
+#import <UIKit/UIKit.h>
 
 inline NSURL *URLWith(NSString *urlString) {
     if ([urlString isKindOfClass:[NSString class]]) {
@@ -34,7 +27,7 @@ inline bool predicateIsMobilePhone(NSString * mobilePhone) {
 }
 
 inline void showSystemAlert(NSString * title,NSString *message) {
-    if (kOS_iOS9) {
+    if (kiOS9Later) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:nil];
         [alert addAction:okAction];

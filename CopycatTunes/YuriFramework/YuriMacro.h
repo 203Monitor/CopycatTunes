@@ -1,31 +1,25 @@
 //
-//  Macro.h
-//  Request
+//  YuriMacro.h
+//  CopycatTunes
 //
-//  Created by 武国斌 on 2017/4/11.
+//  Created by 武国斌 on 2017/4/26.
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef YuriMacro_h
+#define YuriMacro_h
 
-@interface Macro : NSObject
+#define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define kWindow kAppDelegate.window
 
-extern NSString *ISOK(BOOL key);
-extern NSURL *URLWith(NSString *urlString);
+#define HUD_SHOW [kWindow indicator:YES]
+#define HUD_HIDE [kWindow indicator:NO]
 
-extern NSString *test;
-extern NSString *one;
-extern NSString *two;
-extern NSString *three;
-
-#pragma mark - 通过RGB获得一个颜色
-extern UIColor * getBackGoundColor(CGFloat r,CGFloat g,CGFloat b,CGFloat alpha);
-
-#pragma mark - 验证手机号
-extern bool predicateIsMobilePhone(NSString * mobilePhone);
-
-#pragma mark - 系统提示框
-extern void showSystemAlert(NSString * title,NSString *message);
+#define IS_SHOWHUD(X) if(X) { \
+HUD_SHOW; \
+} else { \
+HUD_HIDE; \
+}
 
 #pragma mark - 定义机型
 #define is_iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -33,23 +27,6 @@ extern void showSystemAlert(NSString * title,NSString *message);
 #define is_iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #define is_iPhone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
-
-
-#pragma mark - 定义手机系统型号
-#define OSVersion [[UIDevice currentDevice].systemVersion floatValue]
-
-#define kOS_iOS7 (OSVersion >= 7)
-
-#define kOS_iOS8 (OSVersion >= 8)
-
-#define kOS_iOS9 (OSVersion >= 9)
-
-#pragma mark - 宏定义屏幕宽度和高度
-#define KScreenSize    [UIScreen mainScreen].bounds.size
-
-#define KScreenHeight  ([[UIScreen mainScreen] bounds].size.height)
-
-#define KScreenWidth   ([[UIScreen mainScreen] bounds].size.width)
 
 
 #pragma mark - A better version of NSLog
@@ -71,7 +48,7 @@ NSString *className = [[obj class] description];\
 NSInteger counts = ([className length] % 2 == 0) ? ([className length] / 2) : (([className length] + 1) / 2);\
 NSString *minusStar = @"-*";\
 for (NSInteger count = 0; count < counts + 4; count++) {\
-    minusStar = [minusStar stringByAppendingString:@"-*"];\
+minusStar = [minusStar stringByAppendingString:@"-*"];\
 }\
 minusStar = [minusStar stringByAppendingString:@"-"];\
 fprintf(stderr, "%s\n\n", [minusStar UTF8String]);\
@@ -91,6 +68,7 @@ fprintf(stderr, "-------\n");\
 #define NSLogSize(size) NSLog(@"%s w:%.4f, h:%.4f", #size, size.width, size.height)
 #define NSLogPoint(point) NSLog(@"%s x:%.4f, y:%.4f", #point, point.x, point.y)
 
+
 #pragma mark - 比较大小和取绝对值
 #define GETMIN(A,B)     ((A) < (B) ? (A) : (B))
 #define GET(A,B)        ((A) > (B) ? (A) : (B))
@@ -108,4 +86,4 @@ NSLog(@"no string"); \
 [NSURL URLWithString:string] : \
 nil
 
-@end
+#endif /* YuriMacro_h */
