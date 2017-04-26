@@ -1,4 +1,4 @@
 # CopycatTunes
 
-### todo
-[] 后台播放处理
+### todolist
+*[] 后台播放处理
