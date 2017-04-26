@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) UIView *albumCoverView;
 @property (nonatomic, strong) UIImageView *albumCover;
+@property (nonatomic, strong) UIView *albumCoverCover;
+
 @property (nonatomic, strong) UIButton *playprev;
 @property (nonatomic, strong) UIButton *play;
 @property (nonatomic, strong) UIButton *playnext;
@@ -94,7 +96,15 @@
     }];
     
     [kAppDelegate.audioUtil setDownloadingCallBack:^(float downloadPrecent) {
-        NSLog(@"isdownloading : %f",downloadPrecent);
+        float height = (1 - downloadPrecent) * self.albumCoverView.height;
+        NSLog(@"%f",height);
+        [weakSelf.albumCoverCover setHeight:height];
+    }];
+    
+    [self.track hadDownloadWithBlock:^(BOOL hadDownload) {
+        if (!hadDownload) {
+            [weakSelf albumCoverCover];
+        }
     }];
 }
 
@@ -112,7 +122,7 @@
     [self playnext];
     [self progress];
     
-    ModifyAudioVisualizer *modifyaudioVisualizer = [[ModifyAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, self.albumCover.bottom, KScreenWidth, self.progress.top - self.albumCover.bottom - 30)];
+    ModifyAudioVisualizer *modifyaudioVisualizer = [[ModifyAudioVisualizer alloc] initWithFrame:CGRectMake(0.0, self.albumCover.bottom, kScreenWidth, self.progress.top - self.albumCover.bottom - 30)];
     [modifyaudioVisualizer setBackgroundColor:[UIColor clearColor]];
     
     [self.view addSubview:modifyaudioVisualizer];
@@ -127,12 +137,18 @@
         [_albumCoverView.layer setMasksToBounds:YES];
         
         [self.view addSubview:_albumCoverView];
-        
-        UIView *gray = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.albumCoverView.width, self.albumCoverView.height)];
-        [gray setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
-        [_albumCoverView addSubview:gray];
     }
     return _albumCoverView;
+}
+
+- (UIView *)albumCoverCover {
+    if (!_albumCoverCover) {
+        _albumCoverCover = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.albumCoverView.width, self.albumCoverView.height)];
+        [_albumCoverCover setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.6]];
+        [_albumCoverCover setUserInteractionEnabled:NO];
+        [self.albumCoverView addSubview:_albumCoverCover];
+    }
+    return _albumCoverCover;
 }
 
 - (UIImageView *)albumCover {
@@ -214,7 +230,7 @@
 
 - (UIProgressView *)progress {
     if (!_progress) {
-        _progress = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth / 4 * 3, 5)];
+        _progress = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth / 4 * 3, 5)];
         [_progress setCenterY:self.play.centerY - 80];
         [_progress setCenterX:self.view.centerX];
         [self.view addSubview:_progress];
