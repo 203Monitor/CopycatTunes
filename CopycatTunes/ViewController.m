@@ -51,6 +51,7 @@
     _textField = searchTerm;
     
     [_textField setText:@"shape of you"];
+    [_textField setText:@"玻璃珠"];
     
     UIButton *jump = [UIButton buttonWithType:UIButtonTypeSystem];
     [jump setbuttonWithTitle:@"search song"];
