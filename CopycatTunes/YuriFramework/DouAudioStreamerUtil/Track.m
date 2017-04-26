@@ -82,4 +82,10 @@
     return [_artist getReal];
 }
 
+- (void)hadDownloadWithBlock:(void(^)(BOOL hadDownload))callBack {
+    [DBOperation queryTrackWithtrackId:self.trackId andCallback:^(BOOL isDownload) {
+        callBack(isDownload);
+    }];
+}
+
 @end

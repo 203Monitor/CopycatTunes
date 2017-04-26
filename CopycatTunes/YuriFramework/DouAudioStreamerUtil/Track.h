@@ -23,5 +23,6 @@
 
 - (BOOL)isNowPlaying;
 
+- (void)hadDownloadWithBlock:(void(^)(BOOL hadDownload))callBack;
 
 @end
