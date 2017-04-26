@@ -27,12 +27,12 @@
 - (void)updateWithModel:(id)model {
     [self.trackNameLabel setText:[model title]];
     [self.trackNameLabel sizeToFit];
-    [self.trackNameLabel setWidth:KScreenWidth - 60];
+    [self.trackNameLabel setWidth:kScreenWidth - 60];
     [self.trackNameLabel setTop:self.avator.top];
     
     [self.artistLabel setText:[model artist]];
     [self.artistLabel sizeToFit];
-    [self.artistLabel setWidth:KScreenWidth - 60];
+    [self.artistLabel setWidth:kScreenWidth - 60];
     [self.artistLabel setTop:self.trackNameLabel.bottom + 10];
     
     [self.avator sd_setImageWithURL:[model preCover]];
@@ -40,7 +40,7 @@
 
 - (UILabel *)trackNameLabel {
     if (!_trackNameLabel) {
-        _trackNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 15, KScreenWidth - 60, 30)];
+        _trackNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 15, kScreenWidth - 60, 30)];
         [_trackNameLabel setFont:[UIFont boldSystemFontOfSize:15]];
         [self.contentView addSubview:_trackNameLabel];
     }
@@ -49,7 +49,7 @@
 
 - (UILabel *)artistLabel {
     if (!_artistLabel) {
-        _artistLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 45, KScreenWidth - 60, 20)];
+        _artistLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 45, kScreenWidth - 60, 20)];
         [_artistLabel setFont:[UIFont systemFontOfSize:11]];
         [self.contentView addSubview:_artistLabel];
     }
@@ -75,7 +75,7 @@
     //创建贝塞尔曲线
     UIBezierPath *mPath = [UIBezierPath bezierPath];
     [mPath moveToPoint:CGPointMake(0, height)]; //创建一个点
-    [mPath addLineToPoint:CGPointMake(KScreenWidth, height)]; // 加条线,从点移动到另一个点
+    [mPath addLineToPoint:CGPointMake(kScreenWidth, height)]; // 加条线,从点移动到另一个点
     [mPath closePath]; // 关闭贝塞尔线
     UIColor *stroke = [UIColor blackColor];               //设置红色画笔线
     [stroke set];                                       //填充颜色
