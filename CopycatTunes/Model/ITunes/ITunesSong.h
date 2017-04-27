@@ -55,3 +55,9 @@
 - (Track *)getTrack;
 
 @end
+
+
+/*
+ NSString *api = @"https://itunes.apple.com/search";
+ NSDictionary *params = @{@"media":@"music",@"entity":self.entity,@"term":self.term};
+ */

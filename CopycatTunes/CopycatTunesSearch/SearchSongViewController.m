@@ -62,30 +62,9 @@ static NSString *const SearchCell = @"SearchCell";
 
 - (void)request {
     
-#define QQ true
+    NSString *api = @"http://yuri17.tk/request.php";
+    NSDictionary *params = @{@"version":@"0",@"page":self.page,@"term":self.term};
     
-#if QQ
-    NSString *api = @"http://s.music.qq.com/fcgi-bin/music_search_new_platform";
-    NSDictionary *params = @{@"t":@"0",
-                             @"n":@"20",//数量
-                             @"p":self.page,//分页
-                             @"aggr":@"1",
-                             @"cr":@"1",
-                             @"loginUin":@"0",
-                             @"format":@"json",
-                             @"inCharset":@"GB2312",
-                             @"outCharset":@"utf-8",
-                             @"notice":@"0",
-                             @"platform":@"jqminiframe.json",
-                             @"needNewCode":@"0",
-                             @"catZhida":@"0",
-                             @"remoteplace":@"sizer.newclient.next_song",
-                             @"w":self.term};
-#else
-    NSString *api = @"https://itunes.apple.com/search";
-    NSDictionary *params = @{@"media":@"music",@"entity":self.entity,@"term":self.term};
-#endif
-
 //    WS(weakSelf);
 //    IS_SHOWHUD(YES);
 //    YuriNetwork7 *request = [[YuriNetwork7 alloc] init];
@@ -96,7 +75,6 @@ static NSString *const SearchCell = @"SearchCell";
 //    } andFailure:^(NSError *error) {
 //        NSLog(@"%@",error);
 //    }];
-    
     
     //创建请求管理者
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -112,14 +90,14 @@ static NSString *const SearchCell = @"SearchCell";
         ;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-#if QQ
-        QQBaseClass *model = [QQBaseClass objectFromData:responseObject];
+        id model = nil;
+        model = [QQBaseClass objectFromData:responseObject];
+        if (![model tracks].count) {
+            model = [ITunesSongList objectFromData:responseObject];
+        }
+        
         [weakSelf suffexWithDatas:[model tracks]];
-#else
-        ITunesSongList *model = [ITunesSongList objectFromData:responseObject];
-        [weakSelf suffexWithDatas:[model tracks]];
-#endif
-
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];

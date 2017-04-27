@@ -22,3 +22,23 @@
 - (NSArray *)tracks;
 
 @end
+
+
+/*
+ NSString *api = @"http://s.music.qq.com/fcgi-bin/music_search_new_platform";
+ NSDictionary *params = @{@"t":@"0",
+ @"n":@"20",//数量
+ @"p":self.page,//分页
+ @"aggr":@"1",
+ @"cr":@"1",
+ @"loginUin":@"0",
+ @"format":@"json",
+ @"inCharset":@"GB2312",
+ @"outCharset":@"utf-8",
+ @"notice":@"0",
+ @"platform":@"jqminiframe.json",
+ @"needNewCode":@"0",
+ @"catZhida":@"0",
+ @"remoteplace":@"sizer.newclient.next_song",
+ @"w":self.term};
+ */
