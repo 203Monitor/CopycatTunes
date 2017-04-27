@@ -6,7 +6,7 @@ target 'CopycatTunes' do
   # use_frameworks!
   
   
-  pod  'YuriFramework', :path=>’../YuriFramework/YuriFramework.podspec'
+  pod  'YuriFramework', :path=>’../../YuriFramework/YuriFramework.podspec'
   
   
   # Pods for CopycatTunes
