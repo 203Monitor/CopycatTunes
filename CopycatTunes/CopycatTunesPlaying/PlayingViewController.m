@@ -13,6 +13,8 @@
 
 #import "ModifyAudioVisualizer.h"
 
+#import "Track+isPlaying.h"
+
 @interface PlayingViewController ()
 
 @property (nonatomic, strong) Track *track;
@@ -59,7 +61,7 @@
     
     [self.albumCover sd_setImageWithURL:[self.track cover] placeholderImage:[UIImage imageNamed:@"default_cover_play.jpg"]];
     
-    if (![self.track isNowPlaying]) {
+    if (![self.track isPlaying]) {
         [kAppDelegate.audioUtil playWithTrack:self.track];
         [self.play setSelected:YES];
     }else {

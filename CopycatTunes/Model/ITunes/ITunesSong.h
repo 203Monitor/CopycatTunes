@@ -50,8 +50,6 @@
 @property (nonatomic, strong) NSURL *preview_Url;
 @property (nonatomic, strong) NSURL *albumCover_Url;
 
-@property (nonatomic, assign) BOOL isNowPlaying;
-
 - (Track *)getTrack;
 
 @end

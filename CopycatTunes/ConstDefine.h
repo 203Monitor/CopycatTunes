@@ -18,12 +18,8 @@
 #define FOLDER @"/files"
 #define IDENTIFIER @"IDENTIFIER"
 
-#define MUSICCACHEROOT [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
-
 #define kAUTOLAYOUTSCALE ([UIScreen mainScreen].bounds.size.width / 375.0)
 #define SCALE(X) (kAUTOLAYOUTSCALE * X)
-
-#define MainColor(alpha) [[UIColor colorWithHexString:@"d4237a"] colorWithAlphaComponent:alpha]
 
 typedef void(^CallBack)(id obj);
 
