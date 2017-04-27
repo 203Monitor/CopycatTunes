@@ -9,6 +9,6 @@ target 'CopycatTunes' do
   pod  'YuriFramework', :path=>’../YuriFramework/YuriFramework.podspec'
   
   
-  # Pods for HalfTunes
+  # Pods for CopycatTunes
 
 end
