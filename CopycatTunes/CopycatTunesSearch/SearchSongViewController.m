@@ -62,7 +62,7 @@ static NSString *const SearchCell = @"SearchCell";
 
 - (void)request {
     
-    NSString *api = @"http://yuri17.tk/request.php";
+    NSString *api = @"http://tohostinger.tk/request.php";
     NSDictionary *params = @{@"version":@"0",@"page":self.page,@"term":self.term};
     
 //    WS(weakSelf);
