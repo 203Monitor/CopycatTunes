@@ -6,9 +6,9 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseViewControllerCustom.h"
 
-@interface ViewController : BaseViewController
+@interface ViewController : BaseViewControllerCustom
 
 @end
 

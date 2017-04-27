@@ -6,10 +6,10 @@
 //  Copyright © 2017年 武国斌. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseViewControllerCustom.h"
 @class Track;
 
-@interface PlayingViewController : BaseViewController
+@interface PlayingViewController : BaseViewControllerCustom
 
 - (instancetype)initWithModel:(Track *)model;
 
