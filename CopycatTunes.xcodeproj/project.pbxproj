@@ -11,6 +11,8 @@
 		0E04014A1EB08B2D00145188 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0401481EB08B2D00145188 /* back@2x.png */; };
 		0E04014B1EB08B2D00145188 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0401491EB08B2D00145188 /* back@3x.png */; };
 		0E79A7771EB1F6FA00EB2776 /* Track+isPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A7761EB1F6FA00EB2776 /* Track+isPlaying.m */; };
+		0E79A7891EB1FD3A00EB2776 /* BaseViewControllerCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A7881EB1FD3A00EB2776 /* BaseViewControllerCustom.m */; };
+		0E79A78C1EB1FD5000EB2776 /* BaseTableViewControllerCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E79A78B1EB1FD5000EB2776 /* BaseTableViewControllerCustom.m */; };
 		0EEE3DBD1EA7740400FC0D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE3DBC1EA7740400FC0D4D /* main.m */; };
 		0EEE3DC61EA7740400FC0D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC41EA7740400FC0D4D /* Main.storyboard */; };
 		0EEE3DC81EA7740400FC0D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE3DC71EA7740400FC0D4D /* Assets.xcassets */; };
@@ -55,6 +57,10 @@
 		0E79A7751EB1F6FA00EB2776 /* Track+isPlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+isPlaying.h"; sourceTree = "<group>"; };
 		0E79A7761EB1F6FA00EB2776 /* Track+isPlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+isPlaying.m"; sourceTree = "<group>"; };
 		0E79A7861EB1F90700EB2776 /* ConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstDefine.h; sourceTree = "<group>"; };
+		0E79A7871EB1FD3A00EB2776 /* BaseViewControllerCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewControllerCustom.h; sourceTree = "<group>"; };
+		0E79A7881EB1FD3A00EB2776 /* BaseViewControllerCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewControllerCustom.m; sourceTree = "<group>"; };
+		0E79A78A1EB1FD5000EB2776 /* BaseTableViewControllerCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewControllerCustom.h; sourceTree = "<group>"; };
+		0E79A78B1EB1FD5000EB2776 /* BaseTableViewControllerCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewControllerCustom.m; sourceTree = "<group>"; };
 		0EEE3DB81EA7740400FC0D4D /* CopycatTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopycatTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEE3DBC1EA7740400FC0D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0EEE3DC51EA7740400FC0D4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 				0EEE3DE91EA774AB00FC0D4D /* Model */,
 				0EEE3E271EA774AB00FC0D4D /* PrefixHeader.pch */,
 				0E79A7861EB1F90700EB2776 /* ConstDefine.h */,
+				0E79A7871EB1FD3A00EB2776 /* BaseViewControllerCustom.h */,
+				0E79A7881EB1FD3A00EB2776 /* BaseViewControllerCustom.m */,
+				0E79A78A1EB1FD5000EB2776 /* BaseTableViewControllerCustom.h */,
+				0E79A78B1EB1FD5000EB2776 /* BaseTableViewControllerCustom.m */,
 				0EEE3E181EA774AB00FC0D4D /* AppDelegate.h */,
 				0EEE3E191EA774AB00FC0D4D /* AppDelegate.m */,
 				0EEE3E1A1EA774AB00FC0D4D /* ViewController.h */,
@@ -446,9 +456,11 @@
 				0EEE3E521EA774AB00FC0D4D /* ViewController.m in Sources */,
 				0EEE3E411EA774AB00FC0D4D /* QQData.m in Sources */,
 				0EEE3E401EA774AB00FC0D4D /* QQBaseClass.m in Sources */,
+				0E79A78C1EB1FD5000EB2776 /* BaseTableViewControllerCustom.m in Sources */,
 				0EEE3E441EA774AB00FC0D4D /* QQQc.m in Sources */,
 				0EEE3E651EA7764B00FC0D4D /* SongTableViewCell.m in Sources */,
 				0EEE3E511EA774AB00FC0D4D /* AppDelegate.m in Sources */,
+				0E79A7891EB1FD3A00EB2776 /* BaseViewControllerCustom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
