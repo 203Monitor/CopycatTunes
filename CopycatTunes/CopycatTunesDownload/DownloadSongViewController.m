@@ -99,6 +99,22 @@ static NSString *const LocalCell = @"LocalCell";
     [self.navigationController pushViewController:playing animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    WS(weakSelf);
+    UITableViewRowAction *rowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [weakSelf rowActionForIndex:0 andIndexPath:indexPath];
+    }];
+    return @[rowAction];
+}
+
+- (void)rowActionForIndex:(NSInteger)idx andIndexPath:(NSIndexPath *)indexPath {
+    [self.datas removeObjectAtIndex:indexPath.row];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
