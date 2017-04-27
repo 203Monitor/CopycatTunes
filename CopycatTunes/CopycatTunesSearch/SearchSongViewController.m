@@ -61,8 +61,6 @@ static NSString *const SearchCell = @"SearchCell";
 }
 
 - (void)request {
-    
-    NSString *api = @"http://tohostinger.tk/request.php";
     NSDictionary *params = @{@"version":@"0",@"page":self.page,@"term":self.term};
     
 //    WS(weakSelf);
@@ -86,7 +84,7 @@ static NSString *const SearchCell = @"SearchCell";
     IS_SHOWHUD(YES);
     
     WS(weakSelf);
-    [manager GET:api parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:SEARCHAPI parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         ;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         

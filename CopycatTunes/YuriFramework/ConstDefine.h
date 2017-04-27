@@ -11,6 +11,8 @@
 
 #pragma mark - self
 
+#define SEARCHAPI @"http://tohostinger.tk/request.php"
+
 #define POSTREQUEST @"POST"
 #define GETREQUEST @"GET"
 #define FOLDER @"/files"
